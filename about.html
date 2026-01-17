@@ -1,0 +1,239 @@
+---
+layout: default
+title: About Me
+robots: noindex
+---
+
+<div class="about-content">
+  <h1>About Me</h1>
+  <hr class="section-title__divider">
+
+  <!-- You can add your content here -->
+  <div class="about-section">
+    <p>Welcome to my page. I am a Year 2 student at the National University of Singapore (NUS), majoring in Computer
+      Science.
+      I mainly work with Java and have built a solid foundation in OOP and algorithms through coursework and projects.
+      Outside class, I enjoy exploring interactive media and game/graphics development (OpenGL).
+      Lately, I’ve also been diving into AI and LLMs — most recently building a RAG-based NetEase Cloud Music AI agent
+      backend demo,
+      and experimenting with a multimodal hybrid model at TikTok TechJam 2025.</p>
+  </div>
+
+  <br>
+  <br>
+
+  <h1>Education</h1>
+  <hr class="section-title__divider">
+  <div class="about-section">
+    <p><strong>National University of Singapore</strong></p>
+    <p><strong>Bachelor of Computing in Computer Science</strong></p>
+    <p><strong>Awards:</strong> NUS Science and Technology Undergraduate Scholarship (2024-2028)</p>
+    <p><strong>Expected Graduation Date:</strong> June 2028</p>
+    <p><strong>Academic Courses:</strong></p>
+    <ul class="course-list">
+      <li>MA1522 Linear Algebra</li>
+      <li>ST2334 Probability and Statistics</li>
+      <li>CS1231S Discrete Mathematics</li>
+      <li>CS2030S Programming Methodology II (Object-Oriented Programming in Java)</li>
+      <li>CS2040S Data Structures and Algorithms</li>
+      <li>CS2100 Computer Organisation</li>
+      <li>CS3241 Computer Graphics</li>
+    </ul>
+
+  </div>
+
+
+  <br>
+  <br>
+
+  <h1>Skills</h1>
+  <hr class="section-title__divider">
+  <section class="skills-section">
+    <div class="skills-section">
+      <p><strong>Programming Languages</strong></p>
+      <ul>
+        <li>Proficient: Java</li>
+        <li>Working knowledge: Python, JavaScript, HTML/CSS</li>
+        <li>Basic: C, C++</li>
+      </ul>
+
+      <p><strong>Backend Development</strong></p>
+      <ul>
+        <li>Proficient: Spring Boot; RESTful API design and implementation</li>
+        <li>Working knowledge: Maven (dependency management, build &amp; packaging); Swagger/OpenAPI (API documentation
+          &amp; testing); OkHttp (HTTP client integration)</li>
+      </ul>
+
+      <p><strong>Data &amp; Storage</strong></p>
+      <ul>
+        <li>Working knowledge: MySQL (basic schema &amp; CRUD); H2 (local dev/demo); Redis (cache integration &amp;
+          basic operations)</li>
+      </ul>
+
+      <p><strong>Engineering &amp; Environment Management</strong></p>
+      <ul>
+        <li>Working knowledge: Spring Profiles (dev/prod separation); Docker &amp; docker-compose (one-command
+          dependencies with volumes and healthchecks)</li>
+        <li>Familiar: reproducible setup and graceful degradation concepts (configuration layering, environment
+          variables, README-aligned setup)</li>
+      </ul>
+
+      <p><strong>RAG &amp; LLM Integration</strong></p>
+      <ul>
+        <li>Working knowledge: RAG pipeline integration; OpenAI-compatible APIs (e.g., DashScope); prompt engineering
+          and output control (ChatGPT, Qwen)</li>
+        <li>Basic: FAISS (vector indexing and similarity retrieval)</li>
+      </ul>
+
+      <p><strong>Machine Learning &amp; Multimodal</strong></p>
+      <ul>
+        <li>Working knowledge: BERT/FastBERT for text classification/filtering; CLIP for multimodal
+          representation/validation</li>
+        <li>Basic: PyTorch; Transformers (inference and experimentation workflow)</li>
+        <li>Familiar: vLLM (inference serving exploration)</li>
+      </ul>
+
+      <p><strong>Graphics &amp; Interactive Media</strong></p>
+      <ul>
+        <li>Working knowledge: OpenGL (coursework/project experience)</li>
+      </ul>
+
+      <p><strong>Documentation &amp; Tools</strong></p>
+      <ul>
+        <li>Proficient: Git, GitHub, Markdown</li>
+        <li>Working knowledge: Mermaid; JetBrains IDEs; Microsoft Office (Word/PowerPoint/Excel); Aseprite</li>
+      </ul>
+
+
+    </div>
+  </section>
+
+  <br>
+  <br>
+
+
+
+  <h1>Experiences</h1>
+  <hr class="section-title__divider">
+  <div class="about-section">
+    <!-- 1) NetEase -->
+    <article class="project">
+      <h3>NetEase Cloud Music Intelligent Customer Support Agent (Minimal RAG)</h3>
+
+      <p><strong>Description:</strong> A minimal RAG-based customer support agent backend that integrates retrieval,
+        guarded prompting, and reproducible local deployment.</p>
+
+      <p><strong>Highlights:</strong></p>
+      <ul>
+        <li>Implemented RESTful endpoints with Swagger/OpenAPI for rapid testing and demo recording.</li>
+        <li>Built a dev/prod configuration split using Spring Profiles (dev with H2; prod with MySQL + Redis).</li>
+        <li>Added a Redis cache with TTL and graceful fallback, keeping the main request path available even when Redis
+          is down.</li>
+        <li>Containerized dependencies via docker-compose (MySQL + Redis with volumes and healthchecks) for one-command
+          local setup.</li>
+        <li>Maintained an architecture-first README (Mermaid diagrams and startup steps) aligned with the
+          implementation.</li>
+      </ul>
+      <p><strong>Project Link:</strong> <a href="https://chenhongshan333.github.io/NetEase-music-agent-backend-demo/"
+          target="_blank">NetEase-music-agent-backend-demo</a></p>
+      <p><strong>Duration:</strong> Dec 2025 - Jan 2026</p>
+      <p><strong>Tech Stack:</strong> Java | Spring Boot | Spring Data JPA | Maven | H2 | MySQL | Redis | Docker Compose
+        | Swagger/OpenAPI | OkHttp | OpenAI-compatible LLM API</p>
+    </article>
+
+    <br>
+
+    <!-- 2) Harmonia -->
+    <article class="project">
+      <h3>Harmonia — Hierarchical Multimodal Hybrid Review Validation with RAG</h3>
+
+      <p><strong>Description:</strong> A hierarchical review filtering system using AI models we trained, routing
+        requests
+        across fast and accurate stages to separate genuine feedback from spam at scale.</p>
+
+      <p><strong>Highlights:</strong></p>
+      <ul>
+        <li>Designed a multi-stage pipeline: rule-based preprocessing → fast classifier routing → multimodal validation
+          → RAG-backed final verification.</li>
+        <li>Trained and evaluated text classification models (e.g., FastBERT/BERT-family) and integrated
+          confidence-based routing to balance latency and accuracy.</li>
+        <li>Incorporated multimodal signals (e.g., CLIP) to handle cases where text-only signals are insufficient.</li>
+        <li>Used vector indexing and retrieval components (e.g., FAISS) to support retrieval-augmented verification for
+          hard or ambiguous samples.</li>
+        <li>Supported both single-review and batch processing workflows for practical experimentation and benchmarking.
+        </li>
+      </ul>
+
+      <p><strong>Project Link:</strong> <a href="https://devpost.com/software/harmonia-fnxts1"
+          target="_blank">Harmonia</a></p>
+      <p><strong>Duration:</strong> Aug 2025 - Sep 2025</p>
+      <p><strong>Tech Stack:</strong> Python | PyTorch | Transformers | FastBERT/BERT-family | CLIP | FAISS | Qwen | RAG
+        | vLLM (inference) | OpenAI APIs</p>
+    </article>
+
+    <br>
+
+    <!-- 3) OpenGL -->
+    <article class="project">
+      <h3>OpenGL Graphics Coursework</h3>
+
+      <p><strong>Description:</strong> A collection of OpenGL-based coursework demos exploring core real-time rendering
+        concepts and interactive controls.</p>
+
+      <p><strong>Highlights:</strong></p>
+      <ul>
+        <li>Implemented graphics pipeline fundamentals, including transformations, camera controls, and scene
+          organization.</li>
+        <li>Built shader-based rendering effects (e.g., lighting, materials, and texturing) as part of course
+          assignments.</li>
+        <li>Added interactive input handling for navigation and parameter tuning during demos.</li>
+      </ul>
+
+      <p><strong>Project Link:</strong> <a href="https://chenhongshan333.github.io/OpenGL-Graphics-Coursework/" target="_blank">OpenGL
+          Coursework</a></p>
+      <p><strong>Duration:</strong> Aug 2025 - Dec 2025</p>
+      <p><strong>Tech Stack:</strong>  C++ | OpenGL | GLUT</p>
+    </article>
+  </div>
+
+  <br>
+  <br>
+
+
+  <h1>Extra Curricular Activities</h1>
+  <hr class="section-title__divider">
+  <div class="about-section">
+    <p><strong>NUS Piano Ensemble</strong></p>
+    <p>Role: Member</p>
+    <p>Duration: Aug 2024 – Present</p>
+    <ul>
+      <li>Actively participate in club activities.</li>
+      <li>Performed 4 piano duets with a partner in the annual concert.</li>
+      <li>Completed 3 performances in performance classes and received guidance from the professor on piano technique.
+      </li>
+    </ul>
+
+    <br>
+
+    <p><strong>NUS Climbing Club</strong></p>
+    <p>Role: Member</p>
+    <p>Duration: Aug 2025 – Present</p>
+    <ul>
+      <li>Holds the Singapore SNCS Level 2 certification.</li>
+      <li>Maintains weekly high-intensity training sessions with the club.</li>
+    </ul>
+
+    <br>
+
+    <p><strong>Chengdu Shude High School International Division Orchestra &amp; Choir</strong></p>
+    <p>Role: Principal Pianist</p>
+    <p>Duration: Jan 2022 – Jan 2024</p>
+    <ul>
+      <li>Served as the piano accompanist for the school orchestra and choir, and hosted and performed in 6 concerts.
+      </li>
+      <li>Performed 5 piano solo pieces.</li>
+    </ul>
+  </div>
+
+</div>
+</div>

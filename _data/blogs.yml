@@ -1,0 +1,23 @@
+# Blog posts data
+# Add your blog posts here
+
+- title: "Sample Blog Post 1"
+  url: "#"
+  image: "https://via.placeholder.com/400x250/3498db/ffffff?text=Blog+Post+1"
+  excerpt: "This is a sample blog post excerpt. You can add a brief description of your blog post here to give readers an idea of what the post is about..."
+  date: "January 15, 2026"
+  comments: 0
+
+- title: "Sample Blog Post 2"
+  url: "#"
+  image: "https://via.placeholder.com/400x250/2ecc71/ffffff?text=Blog+Post+2"
+  excerpt: "Another sample blog post. Replace this with your actual blog content description. The excerpt should be concise and engaging..."
+  date: "January 10, 2026"
+  comments: 0
+
+- title: "Sample Blog Post 3"
+  url: "#"
+  image: "https://via.placeholder.com/400x250/e74c3c/ffffff?text=Blog+Post+3"
+  excerpt: "A third sample blog post to demonstrate the card layout. Each card displays an image, title, excerpt, and metadata..."
+  date: "January 5, 2026"
+  comments: 0

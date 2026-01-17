@@ -527,6 +527,110 @@ nav {
 			display: block;
 			font-size: 1.7em; }
 
+/* Email Dropdown Styles */
+.email-dropdown {
+	position: relative; }
+	.email-dropdown .email-trigger {
+		cursor: pointer; }
+	.email-dropdown .email-dropdown-menu {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		background: rgba(0, 0, 0, 0.9);
+		border-radius: 8px;
+		padding: 8px 0;
+		margin-bottom: 10px;
+		min-width: 180px;
+		list-style: none;
+		z-index: 1000;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+		transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s; }
+		.email-dropdown .email-dropdown-menu::after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			border: 8px solid transparent;
+			border-top-color: rgba(0, 0, 0, 0.9); }
+		.email-dropdown .email-dropdown-menu li {
+			margin: 0;
+			width: 100%; }
+			.email-dropdown .email-dropdown-menu li a {
+				display: block;
+				padding: 10px 15px;
+				color: #fff;
+				font-size: 0.85em;
+				text-align: left;
+				border: none;
+				border-radius: 0;
+				opacity: 0.9;
+				white-space: nowrap;
+				transition: background 0.2s ease; }
+				.email-dropdown .email-dropdown-menu li a:hover {
+					background: rgba(255, 255, 255, 0.15);
+					opacity: 1; }
+				.email-dropdown .email-dropdown-menu li a i {
+					margin-right: 8px; }
+	.email-dropdown .email-dropdown-menu.show {
+		opacity: 1;
+		visibility: visible; }
+
+/* Resume Dropdown Styles */
+.resume-dropdown {
+	position: relative; }
+	.resume-dropdown .resume-trigger {
+		cursor: pointer; }
+	.resume-dropdown .resume-dropdown-menu {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		background: rgba(0, 0, 0, 0.9);
+		border-radius: 8px;
+		padding: 8px 0;
+		margin-bottom: 10px;
+		min-width: 180px;
+		list-style: none;
+		z-index: 1000;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+		transition: opacity 0.3s ease, visibility 0.3s ease; }
+		.resume-dropdown .resume-dropdown-menu::after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			border: 8px solid transparent;
+			border-top-color: rgba(0, 0, 0, 0.9); }
+		.resume-dropdown .resume-dropdown-menu li {
+			margin: 0;
+			width: 100%; }
+			.resume-dropdown .resume-dropdown-menu li a {
+				display: block;
+				padding: 10px 15px;
+				color: #fff;
+				font-size: 0.85em;
+				text-align: left;
+				border: none;
+				border-radius: 0;
+				opacity: 0.9;
+				white-space: nowrap;
+				transition: background 0.2s ease; }
+				.resume-dropdown .resume-dropdown-menu li a:hover {
+					background: rgba(255, 255, 255, 0.15);
+					opacity: 1; }
+				.resume-dropdown .resume-dropdown-menu li a i {
+					margin-right: 8px; }
+	.resume-dropdown .resume-dropdown-menu.show {
+		opacity: 1;
+		visibility: visible; }
+
 .pagination {
 	display: block;
 	margin: 0 0 4em 0; }

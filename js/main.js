@@ -52,4 +52,79 @@ $(document).ready(function () {
   $('.navigation-wrapper .projects-button').click(function () {
     toggleMobileMenu();
   })
+
+  // Blog page search toggle functionality
+  $('#searchToggle').click(function () {
+    var searchContainer = $('.blog-search-container');
+    var searchToggle = $(this);
+    
+    searchContainer.toggleClass('active');
+    searchToggle.toggleClass('active');
+    
+    // Focus on input when opened
+    if (searchContainer.hasClass('active')) {
+      setTimeout(function() {
+        $('.blog-search-input').focus();
+      }, 700);
+    }
+  });
+
+  // Close search when clicking outside
+  $(document).click(function(e) {
+    var searchContainer = $('.blog-search-container');
+    var searchToggle = $('#searchToggle');
+    
+    if (!$(e.target).closest('.blog-search-container, #searchToggle').length) {
+      searchContainer.removeClass('active');
+      searchToggle.removeClass('active');
+    }
+  });
+
+  // Close search when pressing Escape
+  $(document).keyup(function(e) {
+    if (e.key === 'Escape') {
+      $('.blog-search-container').removeClass('active');
+      $('#searchToggle').removeClass('active');
+    }
+  });
+
+  // Email dropdown click functionality - show for 0.3s then hide
+  var emailTimeout;
+  $('.email-trigger').click(function(e) {
+    e.preventDefault();
+    var dropdownMenu = $(this).siblings('.email-dropdown-menu');
+    
+    // Clear any existing timeout
+    if (emailTimeout) {
+      clearTimeout(emailTimeout);
+    }
+    
+    // Show the dropdown
+    dropdownMenu.addClass('show');
+    
+    // Hide after 0.3 seconds (300ms)
+    emailTimeout = setTimeout(function() {
+      dropdownMenu.removeClass('show');
+    }, 1000);
+  });
+
+  // Resume dropdown click functionality - show for 0.3s then hide
+  var resumeTimeout;
+  $('.resume-trigger').click(function(e) {
+    e.preventDefault();
+    var dropdownMenu = $(this).siblings('.resume-dropdown-menu');
+    
+    // Clear any existing timeout
+    if (resumeTimeout) {
+      clearTimeout(resumeTimeout);
+    }
+    
+    // Show the dropdown
+    dropdownMenu.addClass('show');
+    
+    // Hide after 0.3 seconds (300ms)
+    resumeTimeout = setTimeout(function() {
+      dropdownMenu.removeClass('show');
+    }, 1000);
+  });
 })

@@ -1,22 +1,24 @@
 # Site settings
-title: Thomas Zühlke
+title: Chen Hongshan
 description: 'Business Card Page'
 url: 'https://www.zuehlke.cloud'
 baseurl: ''
-profilepic: '/images/tzuehlke.jpg'
-bkimage: '/images/bk1.jpg'
+profilepic: '/images/Hongshan.jpg'
+bkimage: '/images/bg4.jpg'
 google_analytics: UA-XXXXXX-X
-font_awesome: 'XXXXXXXXXX.js'
+font_awesome: '2af53778a7.js'
+
+# Blog settings
+blog_title: 'Hongshan Talk'
+blog_header_image: '/images/bg.jpg'
 
 author:
-  name: 'Thomas Zühlke'
-  email: thomas@zuehlke.cloud
-  mastodon: tzuehlke@mstdn.social
-  twitter_username: thomzuehlke
-#  facebook_username: joshgerdes
-  github_username:  tzuehlke
+  name: 'Chen Hongshan'
+  school_email: e1471281@u.nus.edu
+  personal_email: 221654604@qq.com
+  github_username:  ChenHongshan333
   linkedin_username:  thomas-zühlke-889182165
-  meetup_name: Azure-Meetup-Rostock-MV
+#  meetup_name: Azure-Meetup-Rostock-MV
 
 # Build settings
 destination: _site
@@ -35,3 +37,5 @@ kramdown:
 
 #plugins: ['jekyll-paginate']
 exclude: ['README.md', 'screenshot-overview.png']
+
+blog_title: 'Hongshan is thinking...'

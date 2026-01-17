@@ -1,0 +1,25 @@
+---
+layout: blog
+title: Blog
+---
+
+<div class="blog-cards">
+  {% for post in site.data.blogs %}
+  <article class="blog-card">
+    <a href="{{ post.url }}" class="blog-card__link" target="_blank">
+      <div class="blog-card__image">
+        <img src="{{ post.image }}" alt="{{ post.title }}">
+      </div>
+      <div class="blog-card__content">
+        <h2 class="blog-card__title">{{ post.title }}</h2>
+        <p class="blog-card__excerpt">{{ post.excerpt }}</p>
+        <span class="blog-card__readmore">Read more →</span>
+      </div>
+      <div class="blog-card__meta">
+        <span class="blog-card__date"><i class="fa-regular fa-clock"></i> {{ post.date }}</span>
+        <span class="blog-card__comments"><i class="fa-regular fa-comment"></i> {{ post.comments | default: 0 }}</span>
+      </div>
+    </a>
+  </article>
+  {% endfor %}
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  <body class="blog-page" style="background-image: url('{{ site.baseurl }}{{ site.bkimage }}');">
+    <!-- Blog Header -->
+    <header class="blog-header">
+      <div class="blog-header__content">
+        <h1 class="blog-header__title">{{ site.blog_title | default: "My Blog" }}</h1>
+      </div>
+      <nav class="blog-nav">
+        <div class="blog-search-container">
+          <div class="blog-search-container__inner">
+            <input type="text" class="blog-search-input" placeholder="Search for posts">
+          </div>
+        </div>
+        <div class="blog-nav__inner">
+          <ul class="blog-nav__list">
+            <li class="blog-nav__item"><a href="{{ site.baseurl }}/">HOME</a></li>
+            <li class="blog-nav__item"><a href="{{ site.baseurl }}/about">ABOUT ME</a></li>
+            <li class="blog-nav__item"><a href="{{ site.baseurl }}/#projects">PROJECTS</a></li>
+            <li class="blog-nav__item blog-nav__search" id="searchToggle">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="blog-main">
+      {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="blog-footer">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/main.js"></script>
+  </body>
+</html>
