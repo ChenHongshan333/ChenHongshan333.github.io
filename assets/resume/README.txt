@@ -1,6 +1,6 @@
-Place your resume PDF files here:
+My resume PDF files are here:
 
-1. resume_chinese.pdf - Chinese version of your resume
-2. resume_english.pdf - English version of your resume
+1. resume_chinese.pdf - Chinese version of my resume
+2. resume_english.pdf - English version of my resume
 
-These files will be linked from the Resume dropdown menu on your website.
+These files will be linked from the Resume dropdown menu on my website.
