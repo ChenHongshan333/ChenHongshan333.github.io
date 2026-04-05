@@ -37,7 +37,11 @@ robots: noindex
       <li>CS2030S Programming Methodology II (Object-Oriented Programming in Java)</li>
       <li>CS2040S Data Structures and Algorithms</li>
       <li>CS2100 Computer Organisation</li>
+      <li>CS2109S Introduction to AI and Machine Learning</li>
+      <li>CS2103T Software Engineering</li>
+      <li>CS3240 Interaction Design</li>
       <li>CS3241 Computer Graphics</li>
+      <li>CS3242 3D Modelling and Animation</li>
     </ul>
 
   </div>
@@ -57,53 +61,58 @@ robots: noindex
         <li>Basic: C, C++</li>
       </ul>
 
-      <p><strong>Backend Development</strong></p>
+      <p><strong>Backend Development &amp; APIs</strong></p>
       <ul>
-        <li>Proficient: Spring Boot; RESTful API design and implementation</li>
-        <li>Working knowledge: Maven (dependency management, build &amp; packaging); Swagger/OpenAPI (API documentation
-          &amp; testing); OkHttp (HTTP client integration)</li>
+        <li>Proficient: Spring Boot, RESTful API design and implementation</li>
+        <li>Working knowledge: Spring JPA; Maven (dependency management, build &amp; packaging); Swagger/OpenAPI (API
+          documentation &amp; testing); OkHttp (HTTP client integration)</li>
       </ul>
 
       <p><strong>Data &amp; Storage</strong></p>
       <ul>
-        <li>Working knowledge: MySQL (basic schema &amp; CRUD); H2 (local dev/demo); Redis (cache integration &amp;
+        <li>Working knowledge: MySQL (basic schema &amp; CRUD), H2 (local dev/demo), Redis (cache integration &amp;
           basic operations)</li>
       </ul>
 
-      <p><strong>Engineering &amp; Environment Management</strong></p>
+      <p><strong>Engineering &amp; DevOps</strong></p>
       <ul>
-        <li>Working knowledge: Spring Profiles (dev/prod separation); Docker &amp; docker-compose (one-command
-          dependencies with volumes and healthchecks)</li>
-        <li>Familiar: reproducible setup and graceful degradation concepts (configuration layering, environment
+        <li>Working knowledge: Docker &amp; docker-compose (one-command dependencies with volumes and healthchecks);
+          Spring Profiles (dev/prod separation); Git and GitHub</li>
+        <li>Familiar: Reproducible setup and graceful degradation concepts (configuration layering, environment
           variables, README-aligned setup)</li>
       </ul>
 
-      <p><strong>RAG &amp; LLM Integration</strong></p>
+      <p><strong>AI &amp; Machine Learning</strong></p>
       <ul>
-        <li>Working knowledge: RAG pipeline integration; OpenAI-compatible APIs (e.g., DashScope); prompt engineering
-          and output control (ChatGPT, Qwen)</li>
-        <li>Basic: FAISS (vector indexing and similarity retrieval)</li>
-      </ul>
-
-      <p><strong>Machine Learning &amp; Multimodal</strong></p>
-      <ul>
-        <li>Working knowledge: BERT/FastBERT for text classification/filtering; CLIP for multimodal
-          representation/validation</li>
-        <li>Basic: PyTorch; Transformers (inference and experimentation workflow)</li>
-        <li>Familiar: vLLM (inference serving exploration)</li>
+        <li>LLM &amp; RAG:
+          <ul style="list-style-type: circle;">
+            <li>Working knowledge: RAG pipeline integration; OpenAI-compatible APIs (e.g., DashScope); prompt
+              engineering and output control (ChatGPT, Qwen)</li>
+            <li>Basic: FAISS (vector indexing and similarity retrieval)</li>
+          </ul>
+        </li>
+        <li>Multimodal &amp; NLP:
+          <ul style="list-style-type: circle;">
+            <li>Working knowledge: BERT/FastBERT (text classification/filtering); CLIP (multimodal
+              representation/validation)</li>
+            <li>Basic: PyTorch; Transformers (inference and experimentation workflow)</li>
+            <li>Familiar: vLLM (inference serving exploration)</li>
+          </ul>
+        </li>
       </ul>
 
       <p><strong>Graphics &amp; Interactive Media</strong></p>
       <ul>
-        <li>Working knowledge: OpenGL (coursework/project experience)</li>
+        <li>Familiar: OpenGL, JavaFX (coursework/project experience); Blender (3D modeling); Figma, Miro (design &amp;
+          prototyping)</li>
       </ul>
 
-      <p><strong>Documentation &amp; Tools</strong></p>
+      <p><strong>Documentation &amp; Productivity Tools</strong></p>
       <ul>
         <li>Proficient: Git, GitHub, Markdown</li>
-        <li>Working knowledge: Mermaid; JetBrains IDEs; Microsoft Office (Word/PowerPoint/Excel); Aseprite</li>
+        <li>Working knowledge: Mermaid (diagrams); JetBrains IDEs; Microsoft Office (Word/PowerPoint/Excel); Aseprite
+          (pixel art)</li>
       </ul>
-
 
     </div>
   </section>
@@ -158,7 +167,8 @@ robots: noindex
         <li>Trained and evaluated text classification models (e.g., FastBERT/BERT-family) and integrated
           confidence-based routing to balance latency and accuracy.</li>
         <li>Incorporated multimodal signals (e.g., CLIP) to handle cases where text-only signals are insufficient.</li>
-        <li>Supported both single-review and batch processing workflows for practical experimentation and benchmarking.</li>
+        <li>Supported both single-review and batch processing workflows for practical experimentation and benchmarking.
+        </li>
       </ul>
 
       <p><strong>Project Link:</strong> <a href="https://devpost.com/software/harmonia-fnxts1"
@@ -170,7 +180,42 @@ robots: noindex
 
     <br>
 
-    <!-- 3) OpenGL -->
+    <!-- 3) Mintty Task Manager -->
+    <article class="project">
+      <h3>Mintty: CLI Task Manager</h3>
+
+      <p><strong>Description:</strong> A desktop task management application optimized for CLI users, combining the
+        efficiency of command-line interaction with the clarity of a GUI. Built with strict adherence to Object-Oriented
+        Programming principles for maintainable and extensible code architecture.</p>
+
+      <p><strong>Highlights:</strong></p>
+      <ul>
+        <li>OOP Design: Implemented comprehensive object-oriented architecture with proper
+          encapsulation, inheritance (Todo/Deadline/Event extending abstract Task class), and polymorphism for command
+          handling.</li>
+        <li>Applied SOLID principles throughout the codebase, ensuring separation of concerns between UI, logic, and
+          storage layers.</li>
+        <li>Built three task types (Todo, Deadline, Event) with natural language datetime parsing and flexible
+          scheduling capabilities.</li>
+        <li>Designed command pattern implementation with aliases (e.g., <code>todo</code>/<code>td</code>,
+          <code>deadline</code>/<code>ddl</code>) for rapid workflow execution.
+        </li>
+        <li>Implemented smart search functionality with keyword matching and snooze feature for rescheduling tasks.</li>
+        <li>Integrated automatic data persistence with JSON serialization following proper abstraction layers.</li>
+      </ul>
+
+      <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/ip/releases/tag/A-Release"
+          target="_blank">Mintty Release</a></p>
+      <p><strong>Duration:</strong> Jan 2025 - Apr 2025</p>
+      <p><strong>Tech Stack:</strong> Java 17 | JavaFX GUI | OOP Design Patterns | File I/O</p>
+    </article>
+
+    <br>
+
+
+    <br>
+
+    <!-- 4) OpenGL -->
     <article class="project">
       <h3>OpenGL Graphics Coursework</h3>
 
@@ -186,10 +231,39 @@ robots: noindex
         <li>Added interactive input handling for navigation and parameter tuning during demos.</li>
       </ul>
 
-      <p><strong>Project Link:</strong> <a href="https://chenhongshan333.github.io/OpenGL-Graphics-Coursework/" target="_blank">OpenGL
+      <p><strong>Project Link:</strong> <a href="https://chenhongshan333.github.io/OpenGL-Graphics-Coursework/"
+          target="_blank">OpenGL
           Coursework</a></p>
       <p><strong>Duration:</strong> Aug 2025 - Dec 2025</p>
-      <p><strong>Tech Stack:</strong>  C++ | OpenGL | GLUT</p>
+      <p><strong>Tech Stack:</strong> C++ | OpenGL | GLUT</p>
+    </article>
+
+    <br>
+
+    <!-- 5) 3D Modeling and Animation -->
+    <article class="project">
+      <h3>3D Modeling and Animation</h3>
+
+      <p><strong>Description:</strong> A collection of coursework demonstrating 3D modeling theory, character animation,
+        and computational geometry through Blender animation and C++/OpenGL mesh processing implementations.</p>
+
+      <p><strong>Highlights:</strong></p>
+      <ul>
+        <li>Created a collaborative short animation in Blender featuring custom character modeling, rigging with IK,
+          keyframing with Bezier interpolation, and particle VFX systems.</li>
+        <li>Implemented mesh processing algorithms including triangle mesh data structures (Trist), face/vertex normal
+          computation, smooth shading, and boundary edge detection in C++/OpenGL.</li>
+        <li>Built mesh navigation operations (enext, sym, org, dest, fnext) and component analysis using BFS/DFS for
+          topology computation.</li>
+        <li>Developed OBJ file parser with support for reading/writing Wavefront format, angle statistics computation,
+          and interactive rendering modes (wireframe, flat/smooth shading).</li>
+      </ul>
+
+      <p><strong>Project Link:</strong> <a
+          href="https://github.com/chenhongshan333/3D-Modelling-and-Animation-Coursework" target="_blank">3D Modelling
+          and Animation</a></p>
+      <p><strong>Duration:</strong> Jan 2026 - Apr 2026</p>
+      <p><strong>Tech Stack:</strong> Blender | C++ | OpenGL | GLUT | Cycles Renderer</p>
     </article>
   </div>
 

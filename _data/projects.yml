@@ -13,9 +13,24 @@
   desc: "A review filtering system powered by AI models we trained (FastBERT + Qwen3-8B multimodal, with RAG/FAISS) to separate genuine customer feedback from spam and ads in real time."
   img: /images/tt.jpg
 
+- name: CLI chatbot Mintty
+  gh_user: ChenHongshan333
+  repo: individual project
+  url: https://github.com/ChenHongshan333/ip
+  desc: "Mintty is a desktop app adpated from [Duke](https://nus-cs2103-ay2526-s2.github.io/website/se-book-adapted/projectDuke/index.html#project-duke) for managing tasks, optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI)."
+  img: /images/Duke.png
+
 - name: OpenGL Graphics Coursework (VS2022 + FreeGLUT)
   gh_user: ChenHongshan333
   repo: OpenGL-Graphics-Coursework
-  url: https://chenhongshan333.github.io/OpenGL-Graphics-Coursework/
+  url: https://chenhongshan333.github.io/OpenGL-Graphics-Coursework
   desc: "This OpenGL portfolio is a curated collection of my CS3241 coursework, built in C++ with FreeGLUT on Visual Studio 2022. Across five assignments, I progressed from core 2D transformations to animation systems, lighting and shading, Bezier curve modeling, and finally ray tracing with shadows and texture mapping."
   img: /images/opengl.png
+
+- name: 3D modelling and Animation Coursework
+  gh_user: ChenHongshan333
+  repo: 3D-Modelling-and-Animation-Coursework
+  url: https://github.com/ChenHongshan333/3D-Modelling-and-Animation-Coursework
+  desc: "It showcases two major projects completed for CS3242, demonstrating practical applications of 3D modeling theory, animation principles, and computational geometry. Assignment 1 focuses on storytelling through 3D animation using Blender, while Assignment 2 implements fundamental mesh processing algorithms in C++/OpenGL."
+  img: /images/Blender-Symbol.png
+
