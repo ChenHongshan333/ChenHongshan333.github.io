@@ -13,12 +13,19 @@
   desc: "A review filtering system powered by AI models we trained (FastBERT + Qwen3-8B multimodal, with RAG/FAISS) to separate genuine customer feedback from spam and ads in real time."
   img: /images/tt.jpg
 
-- name: CLI chatbot Mintty
+- name: Mintty - Task Manager
   gh_user: ChenHongshan333
-  repo: individual project
+  repo: ip
   url: https://github.com/ChenHongshan333/ip
-  desc: "Mintty is a desktop app adpated from [Duke](https://nus-cs2103-ay2526-s2.github.io/website/se-book-adapted/projectDuke/index.html#project-duke) for managing tasks, optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI)."
+  desc: "Mintty is a desktop app adpated from [Duke](https://github.com/se-edu/duke) for managing tasks, optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI)."
   img: /images/Duke.png
+
+- name: CatPals - Volunteer Operations App
+  gh_user: ChenHongshan333
+  repo: tp
+  url: https://github.com/ChenHongshan333/tp
+  desc: "CatPals is a brownfield group project adapted from the original contact-management application [AddressBook Level 3 (AB3)](https://github.com/se-edu/addressbook-level3), targeted for NUS Cate Cafe CCA volunteers to manage information about stray cats on the NUS campus."
+  img: /images/AB3.png
 
 - name: OpenGL Graphics Coursework (VS2022 + FreeGLUT)
   gh_user: ChenHongshan333
