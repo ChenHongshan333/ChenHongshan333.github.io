@@ -13,6 +13,27 @@
   desc: "A review filtering system powered by AI models we trained (FastBERT + Qwen3-8B multimodal, with RAG/FAISS) to separate genuine customer feedback from spam and ads in real time."
   img: /images/tt.jpg
 
+- name: Grid Adventure Agent
+  gh_user: ChenHongshan333
+  repo: Grid-Adventure-Agent
+  url: https://github.com/ChenHongshan333/Grid-Adventure-Agent
+  desc: "An AI agent that plays Grid Adventure, a tile-based puzzle game, by planning optimal action sequences using A* search. The agent handles two input modes: structured game state (Task 1) and raw pixel images (Task 2/3)."
+  img: /images/CS109S.png
+
+- name: HomeRun - Co-living Mediator Dashboard
+  gh_user: ChenHongshan333
+  repo: NM3243-HomeRun-UX-Design-Coursework
+  url: https://github.com/ChenHongshan333/NM3243-HomeRun-UX-Design-Coursework
+  desc: "HomeRun is a conceptual desktop system designed to act as a neutral, centralised 'Co-living Mediator' for residents in high-density shared housing. This project was completed as part of NM3243 (Interaction Design) at the National University of Singapore."
+  img: /images/figma.png
+
+- name: PropBank - MatketPlace service
+  gh_user: ChenHongshan333
+  repo: PropBank-individual-portfolio
+  url: https://github.com/ChenHongshan333/PropBank-individual-portfolio
+  desc: "The individual portfolio for the CS3240 Interaction Design module at NUS, documenting my personal contributions and reflections on one of the main services - MarketPlace - of the group project PropBank, a supper app dedicated to cosplay-rooted ecosystem."
+  img: /images/PropBank.png
+
 - name: Mintty - Task Manager
   gh_user: ChenHongshan333
   repo: ip
