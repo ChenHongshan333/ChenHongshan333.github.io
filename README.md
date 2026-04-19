@@ -21,14 +21,14 @@ I am a year 2 Computer Science student at the National University of Singapore (
 | Project | Tech Stack |
 |---|---|
 | NetEase Cloud Music Intelligent Customer Support Agent | Java, Spring Boot, RAG, Redis, Docker |
-| Harmonia — Multimodal Hybrid Review Validation | Python, FastBERT, CLIP, FAISS, Qwen, RAG |
-| Grid Adventure Agent | Python, A* Search |
-| HomeRun — Co-living Mediator Dashboard | Figma, UX Research (NM3243) |
-| PropBank — MarketPlace Service | Figma, UX Design (CS3240) |
-| Mintty — Task Manager | Java 17, JavaFX |
-| CatPals — Volunteer Operations App | Java, JavaFX, Git |
+| Harmonia - Multimodal Hybrid Review Validation | Python, FastBERT, CLIP, FAISS, Qwen, RAG |
+| Grid Adventure Agent | Python, Pytourch, A* Search |
+| HomeRun - Co-living Mediator Dashboard | Figma, UX Design |
+| PropBank - MarketPlace Service | Figma, Next.js, Interaction Design |
+| Mintty - Task Manager | Java 17, JavaFX |
+| CatPals - Volunteer Operations App | Java 17, JavaFX, Git |
 | OpenGL Graphics Coursework | C++, OpenGL, GLUT |
-| 3D Modelling and Animation Coursework | Blender, C++, OpenGL |
+| 3D Modelling and Animation Coursework | C++, OpenGL, Blender |
 
 ## Local Development
 
@@ -41,7 +41,7 @@ bundle exec jekyll serve
 
 Then open [http://localhost:4000](http://localhost:4000).
 
-> **Note:** Do not use VS Code Live Server — it does not process Jekyll's Liquid templates.
+> **Note:** Do not use VS Code Live Server, as it does not process Jekyll's Liquid templates.
 
 ## Stack
 
