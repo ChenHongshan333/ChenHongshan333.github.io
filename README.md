@@ -1,12 +1,10 @@
-# Chen Hongshan — Personal Website
+# Chen Hongshan's Personal Website
 
 Personal portfolio and blog site for Chen Hongshan, built with Jekyll.
 
-Live site: [https://www.zuehlke.cloud](https://www.zuehlke.cloud)
-
 ## About
 
-Year 2 Computer Science student at the National University of Singapore (NUS), NUS Science and Technology Undergraduate Scholarship holder (2024–2028). Interests include backend development, AI/LLM, computer graphics, and interactive media.
+I am a year 2 Computer Science student at the National University of Singapore (NUS), NUS Science and Technology Undergraduate Scholarship holder (2024–2028). Interests include backend development, AI/LLM, computer graphics, and interactive media.
 
 ## Features
 
