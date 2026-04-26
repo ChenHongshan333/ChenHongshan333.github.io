@@ -88,6 +88,25 @@ $(document).ready(function () {
     }
   });
 
+  // Project tag filter
+  $('.project-filter__btn').click(function() {
+    var filter = $(this).data('filter');
+    $('.project-filter__btn').removeClass('active');
+    $(this).addClass('active');
+    if (filter === 'all') {
+      $('.timeline > li').show();
+    } else {
+      $('.timeline > li').each(function() {
+        var tags = $(this).data('tags') || '';
+        if (tags.indexOf(filter) !== -1) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+  });
+
   // Email dropdown click functionality - show for 0.3s then hide
   var emailTimeout;
   $('.email-trigger').click(function(e) {

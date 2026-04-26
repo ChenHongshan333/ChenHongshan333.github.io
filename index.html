@@ -5,17 +5,30 @@ robots: noindex
 
 <!--<div class="main-post-list">-->
 
+  <div class="project-filter">
+    <button class="project-filter__btn active" data-filter="all">All</button>
+    <button class="project-filter__btn" data-filter="AI/ML">AI/ML</button>
+    <button class="project-filter__btn" data-filter="Backend">Backend</button>
+    <button class="project-filter__btn" data-filter="Frontend">Frontend</button>
+    <button class="project-filter__btn" data-filter="Desktop App">Desktop App</button>
+    <button class="project-filter__btn" data-filter="UX Design">UX Design</button>
+    <button class="project-filter__btn" data-filter="Computer Graphics">Computer Graphics</button>
+  </div>
+
   <ul class="timeline">
-    
+
     {% for project in site.data.projects %}
 
-      <li class="timeline-inverted">
+      <li class="timeline-inverted" data-tags="{{ project.tags | join: ',' }}">
         <div class="timeline-image">
           <img class="img-me" src="{{ project.img | prepend: site.baseurl }}" alt="">
         </div>
         <div class="timeline-panel">
           <div class="timeline-heading">
             <h4><a href="{% if project.url %}{{ project.url }}{% else %}https://github.com/{{ project.gh_user }}/{{ project.repo }}{% endif %}" target="_blank">{{ project.name }}</a></h4>
+            {% if project.tags %}
+            <div class="project-tags">{% for tag in project.tags %}<span class="project-tag">{{ tag }}</span>{% endfor %}</div>
+            {% endif %}
           </div>
           <div class="timeline-body">
             {% if project.desc %}
@@ -43,4 +56,3 @@ robots: noindex
   </ul>
 
 <!--</div>-->
-

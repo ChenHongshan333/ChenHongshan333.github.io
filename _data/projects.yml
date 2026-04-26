@@ -5,6 +5,7 @@
   url: https://chenhongshan333.github.io/NetEase-music-agent-backend-demo/
   desc: "A lightweight Retrieval-Augmented Generation (RAG) backend for high-volume customer support scenarios, with production-minded engineering (profiles, Docker infra, caching, and degradation drills)."
   img: /images/n.png
+  tags: [AI/ML, Backend]
 
 - name: Harmonia - Hierarchical Multimodal Hybrid Review Validation with Retrieval-Augmented Generation
   gh_user: ChenHongshan333
@@ -12,6 +13,7 @@
   url: https://devpost.com/software/harmonia-fnxts1
   desc: "A review filtering system powered by AI models we trained (FastBERT + Qwen3-8B multimodal, with RAG/FAISS) to separate genuine customer feedback from spam and ads in real time."
   img: /images/tt.jpg
+  tags: [AI/ML]
 
 - name: Grid Adventure Agent
   gh_user: ChenHongshan333
@@ -19,6 +21,7 @@
   url: https://github.com/ChenHongshan333/Grid-Adventure-Agent
   desc: "An AI agent that plays Grid Adventure, a tile-based puzzle game, by planning optimal action sequences using A* search. The agent handles two input modes: structured game state (Task 1) and raw pixel images (Task 2/3)."
   img: /images/CS109S.png
+  tags: [AI/ML]
 
 - name: HomeRun - Co-living Mediator Dashboard
   gh_user: ChenHongshan333
@@ -26,6 +29,7 @@
   url: https://github.com/ChenHongshan333/NM3243-HomeRun-UX-Design-Coursework
   desc: "HomeRun is a conceptual desktop system designed to act as a neutral, centralised 'Co-living Mediator' for residents in high-density shared housing. This project was completed as part of NM3243 (Interaction Design) at the National University of Singapore."
   img: /images/figma.png
+  tags: [UX Design]
 
 - name: PropBank - MatketPlace service
   gh_user: ChenHongshan333
@@ -33,6 +37,7 @@
   url: https://github.com/ChenHongshan333/PropBank-individual-portfolio
   desc: "The individual portfolio for the CS3240 Interaction Design module at NUS, documenting my personal contributions and reflections on one of the main services - MarketPlace - of the group project PropBank, a supper app dedicated to cosplay-rooted ecosystem."
   img: /images/PropBank.png
+  tags: [UX Design]
 
 - name: Fleet Dashboard - Vehicle fleet management
   gh_user: ChenHongshan333
@@ -40,6 +45,7 @@
   url: https://github.com/ChenHongshan333/fleet-dashboard
   desc: "A vehicle fleet management web app built with React and Vite."
   img: /images/car.jpg
+  tags: [Frontend]
 
 - name: Mintty - Task Manager
   gh_user: ChenHongshan333
@@ -47,6 +53,7 @@
   url: https://github.com/ChenHongshan333/ip
   desc: "Mintty is a desktop app adpated from [Duke](https://github.com/se-edu/duke) for managing tasks, optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI)."
   img: /images/Duke.png
+  tags: [Desktop App]
 
 - name: CatPals - Volunteer Operations App
   gh_user: ChenHongshan333
@@ -54,6 +61,7 @@
   url: https://github.com/ChenHongshan333/tp
   desc: "CatPals is a brownfield group project adapted from the original contact-management application [AddressBook Level 3 (AB3)](https://github.com/se-edu/addressbook-level3), targeted for NUS Cate Cafe CCA volunteers to manage information about stray cats on the NUS campus."
   img: /images/AB3.png
+  tags: [Desktop App]
 
 - name: OpenGL Graphics Coursework (VS2022 + FreeGLUT)
   gh_user: ChenHongshan333
@@ -61,6 +69,7 @@
   url: https://chenhongshan333.github.io/OpenGL-Graphics-Coursework
   desc: "This OpenGL portfolio is a curated collection of my CS3241 coursework, built in C++ with FreeGLUT on Visual Studio 2022. Across five assignments, I progressed from core 2D transformations to animation systems, lighting and shading, Bezier curve modeling, and finally ray tracing with shadows and texture mapping."
   img: /images/opengl.png
+  tags: [Computer Graphics]
 
 - name: 3D modelling and Animation Coursework
   gh_user: ChenHongshan333
@@ -68,4 +77,4 @@
   url: https://github.com/ChenHongshan333/3D-Modelling-and-Animation-Coursework
   desc: "It showcases two major projects completed for CS3242, demonstrating practical applications of 3D modeling theory, animation principles, and computational geometry. Assignment 1 focuses on storytelling through 3D animation using Blender, while Assignment 2 implements fundamental mesh processing algorithms in C++/OpenGL."
   img: /images/Blender-Symbol.png
-
+  tags: [Computer Graphics]
