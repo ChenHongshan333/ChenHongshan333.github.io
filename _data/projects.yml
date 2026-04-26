@@ -34,6 +34,13 @@
   desc: "The individual portfolio for the CS3240 Interaction Design module at NUS, documenting my personal contributions and reflections on one of the main services - MarketPlace - of the group project PropBank, a supper app dedicated to cosplay-rooted ecosystem."
   img: /images/PropBank.png
 
+- name: Fleet Dashboard - Vehicle fleet management
+  gh_user: ChenHongshan333
+  repo: fleet-dashboard
+  url: https://github.com/ChenHongshan333/fleet-dashboard
+  desc: "A vehicle fleet management web app built with React and Vite."
+  img: /images/car.jpg
+
 - name: Mintty - Task Manager
   gh_user: ChenHongshan333
   repo: ip
