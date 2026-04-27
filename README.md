@@ -1,6 +1,7 @@
 # Chen Hongshan's Personal Website
 
 Personal portfolio and blog site for Chen Hongshan, built with Jekyll.
+The website is hosted at: https://chenhongshan333.github.io/.
 
 ## About
 
