@@ -4,14 +4,14 @@
   no_gh: true
   desc: "An end-to-end evaluation system for LLM travel agents — corpus construction, question generation, answer keys grounded in mechanically decidable attributes, automated answer-quality scoring, and leaderboards — built to produce rankings that survive re-runs, addressing the non-reproducibility of LLM-as-judge grading. Reliability was validated through sample-size and ranking-stability analysis (130 questions × 5 models × 3 runs = 1,950 evaluations). First-author manuscript in preparation, with submission planned for late 2026."
   img: /images/eval.svg
-  tags: [Research, AI/ML]
+  tags: [AI/ML]
 
 - name: Long-Horizon Evaluation Benchmark for Video World Models
   meta: Undergraduate Researcher | NUS Odyssey Research Programme | May 2026 - Present
   no_gh: true
   desc: "A benchmark testing whether generated videos preserve evidence and maintain a consistent 3D world across camera departure, occlusion, viewpoint changes, and revisits. Controlled synthetic data is generated in Unreal Engine 5 (scripted camera trajectories, revisit paths, per-object segmentation) so that failures are attributable to the model rather than to uncontrolled scene variation. Manuscript in preparation for submission."
   img: /images/worldmodel.svg
-  tags: [Research, AI/ML, Computer Graphics]
+  tags: [AI/ML, Computer Graphics]
 
 - name: NetEase Cloud Music Intelligent Customer Support Agent (Minimal RAG)
   gh_user: ChenHongshan333
@@ -19,7 +19,7 @@
   url: https://chenhongshan333.github.io/NetEase-music-agent-backend-demo/
   desc: "A RAG support-agent backend in Spring Boot with top-K retrieval and query normalisation, plus a no-evidence refusal gate that short-circuits generation when retrieval returns zero hits — trading answer coverage for groundedness so the agent declines rather than fabricates. A load-testing harness (500 requests @ concurrency 20) diagnosed a JDBC connection-pool ceiling, raising throughput 3.5 → 8.3 req/s."
   img: /images/n.png
-  tags: [AI/ML, Backend]
+  tags: [AI/ML, Software Engineering]
 
 - name: Harmonia - Hierarchical Multimodal Hybrid Review Validation with Retrieval-Augmented Generation
   gh_user: ChenHongshan333
@@ -43,7 +43,7 @@
   url: https://github.com/ChenHongshan333/NM3243-HomeRun-UX-Design-Coursework
   desc: "HomeRun is a conceptual desktop system designed to act as a neutral, centralised 'Co-living Mediator' for residents in high-density shared housing. This project was completed as part of NM3243 (Interaction Design) at the National University of Singapore."
   img: /images/figma.png
-  tags: [UX Design]
+  tags: [UX/UI Design]
 
 - name: PropBank - MatketPlace service
   gh_user: ChenHongshan333
@@ -51,7 +51,7 @@
   url: https://github.com/ChenHongshan333/PropBank-individual-portfolio
   desc: "The individual portfolio for the CS3240 Interaction Design module at NUS, documenting my personal contributions and reflections on one of the main services - MarketPlace - of the group project PropBank, a supper app dedicated to cosplay-rooted ecosystem."
   img: /images/PropBank.png
-  tags: [UX Design]
+  tags: [UX/UI Design]
 
 - name: Fleet Dashboard - Vehicle fleet management
   gh_user: ChenHongshan333
@@ -59,7 +59,7 @@
   url: https://github.com/ChenHongshan333/fleet-dashboard
   desc: "A vehicle fleet management web app built with React and Vite."
   img: /images/car.jpg
-  tags: [Frontend]
+  tags: [Software Engineering, UX/UI Design]
 
 - name: Mintty - Task Manager
   gh_user: ChenHongshan333
@@ -67,7 +67,7 @@
   url: https://github.com/ChenHongshan333/ip
   desc: "Mintty is a desktop app adpated from [Duke](https://github.com/se-edu/duke) for managing tasks, optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI)."
   img: /images/Duke.png
-  tags: [Desktop App]
+  tags: [Software Engineering]
 
 - name: CatPals - Volunteer Operations App
   gh_user: ChenHongshan333
@@ -75,7 +75,7 @@
   url: https://github.com/ChenHongshan333/tp
   desc: "CatPals is a brownfield group project adapted from the original contact-management application [AddressBook Level 3 (AB3)](https://github.com/se-edu/addressbook-level3), targeted for NUS Cate Cafe CCA volunteers to manage information about stray cats on the NUS campus."
   img: /images/AB3.png
-  tags: [Desktop App]
+  tags: [Software Engineering]
 
 - name: OpenGL Graphics Coursework (VS2022 + FreeGLUT)
   gh_user: ChenHongshan333
