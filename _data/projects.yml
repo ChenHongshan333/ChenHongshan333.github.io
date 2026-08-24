@@ -59,7 +59,7 @@
   url: https://github.com/ChenHongshan333/fleet-dashboard
   desc: "A vehicle fleet management web app built with React and Vite."
   img: /images/car.jpg
-  tags: [Software Engineering, UX/UI Design]
+  tags: [UX/UI Design]
 
 - name: Mintty - Task Manager
   gh_user: ChenHongshan333
