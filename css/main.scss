@@ -164,6 +164,119 @@ pre.highlight code,
   }
 }
 
+.edu-facts__heading {
+  font-size: 0.62em;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: #b0b0b0;
+  margin: 0 0 10px 0;
+}
+
+/* ---- Collapsible disclosure (shared by courses, experience, projects) ---- */
+.course-groups {
+  border-top: 1px solid #ececec;
+}
+
+.course-group {
+  border-bottom: 1px solid #ececec;
+}
+
+.course-group__summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 4px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.course-group__summary::-webkit-details-marker { display: none; }
+
+.course-group__summary::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-left: auto;
+  border-right: 2px solid #bbb;
+  border-bottom: 2px solid #bbb;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.25s ease, border-color 0.2s ease;
+  flex: 0 0 auto;
+}
+
+.course-group[open] > .course-group__summary::after {
+  transform: rotate(-135deg) translate(-2px, -2px);
+  border-color: #e25440;
+}
+
+.course-group__summary:hover { color: #e25440; }
+.course-group__summary:hover::after { border-color: #e25440; }
+
+.course-group__summary:focus-visible {
+  outline: 2px solid #e25440;
+  outline-offset: 2px;
+}
+
+.course-group__name {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.95em;
+  color: inherit;
+}
+
+.course-group__count {
+  font-size: 0.68em;
+  color: #aaa;
+  border: 1px solid #e4e4e4;
+  border-radius: 20px;
+  padding: 1px 8px;
+  line-height: 1.6;
+}
+
+.course-group__list {
+  list-style: none;
+  margin: 0;
+  padding: 2px 4px 14px 4px;
+}
+
+.course-group__list li {
+  padding: 4px 0;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.course-code {
+  display: inline-block;
+  min-width: 74px;
+  font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+  font-size: 0.88em;
+  color: #999;
+}
+
+.course-ongoing {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px;
+  border: 1px solid #ecb5a9;
+  background: #fdf3f1;
+  color: #b73a28;
+  border-radius: 20px;
+  font-size: 0.72em;
+  letter-spacing: 0.4px;
+  vertical-align: 1px;
+}
+
+@media (max-width: 768px) {
+  .course-code {
+    display: block;
+    min-width: 0;
+  }
+
+  .course-ongoing { margin-left: 0; }
+}
+
 /* ---- Skills ---- */
 .skills-legend {
   display: flex;
