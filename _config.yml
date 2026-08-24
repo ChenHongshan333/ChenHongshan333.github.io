@@ -14,13 +14,13 @@ blog_header_image: '/images/bg.jpg'
 author:
   name: 'Chen Hongshan'
   school_email: e1471281@u.nus.edu
-  personal_email: diggorysata718@gmail.com
+  personal_email: diggorysara718@gmail.com
   github_username:  ChenHongshan333
   linkedin_username:  hongshan-chen-606928366
 #  meetup_name: Azure-Meetup-Rostock-MV
 
 # Build settings
-destination: _site
+destination: _siter
 markdown: kramdown
 highlighter: rouge
 
