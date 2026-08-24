@@ -87,6 +87,128 @@ pre.highlight code,
   margin-bottom: 1em;
 }
 
+/* ---- Page progress rail (About page) ---- */
+.page-progress {
+  position: fixed;
+  top: 50%;
+  right: 26px;
+  transform: translateY(-50%);
+  z-index: 850;
+}
+
+.page-progress__track {
+  position: absolute;
+  left: 2px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: #e6e6e6;
+  border-radius: 2px;
+  z-index: 0;
+}
+
+.page-progress__fill {
+  width: 100%;
+  height: 0;
+  background: #e25440;
+  border-radius: 2px;
+  transition: height 0.15s linear;
+}
+
+.page-progress__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.page-progress__item {
+  margin: 0;
+  position: relative;
+}
+
+.page-progress__item a {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 6px 0;
+  text-decoration: none;
+  color: #b5b5b5;
+  font-size: 0.72em;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.page-progress__item a:hover { color: #e25440; }
+
+.page-progress__item a:focus-visible {
+  outline: 2px solid #e25440;
+  outline-offset: 3px;
+}
+
+.page-progress__dot {
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #d8d8d8;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.page-progress__item.is-done .page-progress__dot { border-color: #f0aa9d; }
+
+.page-progress__item.is-active .page-progress__dot {
+  border-color: #e25440;
+  background: #e25440;
+  transform: scale(1.4);
+}
+
+.page-progress__item.is-active a {
+  color: #e25440;
+  font-weight: 700;
+}
+
+/* Narrow desktop: the content column leaves no room for labels beside it,
+   so collapse to dots and show the label as a hover tooltip. The anchor
+   keeps horizontal padding so the tap target stays larger than the dot. */
+@media all and (max-width: 1499px) {
+  .page-progress { right: 14px; }
+
+  .page-progress__track { left: 8px; }
+
+  .page-progress__item a { padding: 6px; }
+
+  .page-progress__label {
+    position: absolute;
+    right: calc(100% + 6px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 3px;
+    padding: 3px 9px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+  }
+
+  .page-progress__item a:hover .page-progress__label,
+  .page-progress__item a:focus-visible .page-progress__label {
+    opacity: 1;
+  }
+}
+
+/* Below the theme's own 1100px breakpoint the cover panel goes full width
+   and the layout stops being two-column, so the rail has nowhere to live. */
+@media all and (max-width: 1100px) {
+  .page-progress { display: none; }
+}
+
 /* ---- Education ---- */
 .edu-entry__head {
   display: flex;

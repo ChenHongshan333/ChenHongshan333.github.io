@@ -5,7 +5,36 @@ robots: noindex
 ---
 
 <div class="about-content">
-  <h1>About Me</h1>
+  <nav class="page-progress" aria-label="Page sections">
+    <div class="page-progress__track"><div class="page-progress__fill"></div></div>
+    <ol class="page-progress__list">
+      <li class="page-progress__item" data-target="about">
+        <a href="#about"><span class="page-progress__dot"></span>
+          <span class="page-progress__label">About Me</span></a>
+      </li>
+      <li class="page-progress__item" data-target="education">
+        <a href="#education"><span class="page-progress__dot"></span>
+          <span class="page-progress__label">Education</span></a>
+      </li>
+      <li class="page-progress__item" data-target="skills">
+        <a href="#skills"><span class="page-progress__dot"></span>
+          <span class="page-progress__label">Skills</span></a>
+      </li>
+      <li class="page-progress__item" data-target="experience">
+        <a href="#experience"><span class="page-progress__dot"></span>
+          <span class="page-progress__label">Experience</span></a>
+      </li>
+      <li class="page-progress__item" data-target="projects">
+        <a href="#projects"><span class="page-progress__dot"></span>
+          <span class="page-progress__label">Projects</span></a>
+      </li>
+      <li class="page-progress__item" data-target="activities">
+        <a href="#activities"><span class="page-progress__dot"></span>
+          <span class="page-progress__label">Activities</span></a>
+      </li>
+    </ol>
+  </nav>
+  <h1 id="about">About Me</h1>
   <hr class="section-title__divider">
 
   <!-- You can add your content here -->
@@ -21,7 +50,7 @@ robots: noindex
   <br>
   <br>
 
-  <h1>Education</h1>
+  <h1 id="education">Education</h1>
   <hr class="section-title__divider">
   <div class="about-section">
     <div class="edu-entry">
@@ -123,7 +152,7 @@ robots: noindex
   <br>
   <br>
 
-  <h1>Skills</h1>
+  <h1 id="skills">Skills</h1>
   <hr class="section-title__divider">
 
   <p class="skills-legend">
@@ -358,7 +387,7 @@ robots: noindex
   <br>
 
 
-  <h1>Experience</h1>
+  <h1 id="experience">Experience</h1>
   <hr class="section-title__divider">
   <div class="about-section course-groups">
     <!-- 1) Trip.com Group (Ctrip) -->
@@ -425,7 +454,7 @@ robots: noindex
   <br>
   <br>
 
-  <h1>Projects</h1>
+  <h1 id="projects">Projects</h1>
   <hr class="section-title__divider">
   <div class="about-section course-groups">
     <!-- 1) NetEase -->
@@ -726,7 +755,7 @@ robots: noindex
   <br>
 
 
-  <h1>Extra Curricular Activities</h1>
+  <h1 id="activities">Extra Curricular Activities</h1>
   <hr class="section-title__divider">
   <div class="about-section">
     <p><strong>SoC Freshmen Finale Camp 2026</strong></p>

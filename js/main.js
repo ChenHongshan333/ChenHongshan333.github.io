@@ -88,6 +88,56 @@ $(document).ready(function () {
     }
   });
 
+  // About page: section progress rail
+  var $progress = $('.page-progress');
+  if ($progress.length) {
+    var $items = $progress.find('.page-progress__item');
+    var $fill = $progress.find('.page-progress__fill');
+    var sections = $items.map(function () {
+      return document.getElementById($(this).data('target'));
+    }).get();
+
+    function updateProgress() {
+      var scrollTop = $(window).scrollTop();
+      var winH = $(window).height();
+      var max = Math.max($(document).height() - winH, 1);
+      var ratio = Math.min(Math.max(scrollTop / max, 0), 1);
+      $fill.css('height', (ratio * 100) + '%');
+
+      // Read positions live, since collapsing a <details> shifts every
+      // section below it.
+      var active = 0;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i] && sections[i].getBoundingClientRect().top <= winH * 0.3) {
+          active = i;
+        }
+      }
+      // A short final section may never cross the threshold.
+      if (ratio > 0.995) active = sections.length - 1;
+
+      $items.each(function (i) {
+        $(this).toggleClass('is-active', i === active)
+               .toggleClass('is-done', i < active);
+        if (i === active) {
+          $(this).find('a').attr('aria-current', 'true');
+        } else {
+          $(this).find('a').removeAttr('aria-current');
+        }
+      });
+    }
+
+    $progress.find('a').click(function (e) {
+      var el = document.getElementById($(this).closest('.page-progress__item').data('target'));
+      if (!el) return;
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $(el).offset().top - 24 }, 400);
+    });
+
+    $(window).on('scroll resize', updateProgress);
+    $('.about-content details').on('toggle', updateProgress);
+    updateProgress();
+  }
+
   // Project tag filter
   $('.project-filter__btn').click(function() {
     var filter = $(this).data('filter');
