@@ -23,6 +23,26 @@ pre.highlight code,
   white-space: nowrap;
 }
 
+/* The two cover navs were laid out side by side and only broke onto separate
+   rows once they grew too wide to fit, so the row layout depended on how many
+   buttons happened to be present -- hiding the Blog link pulled the page links
+   up beside the social icons. Give each nav its own full-width row, matching
+   what the theme already does below 960px, and centre the list inside it
+   (the floated <ul> would otherwise hug the left edge).
+   Scoped to >=961px so the theme's own mobile menu rules keep their float. */
+@media all and (min-width: 961px) {
+  .cover-navigation {
+    display: block;
+    clear: both;
+    margin-right: 0;
+  }
+
+  .cover-navigation > .navigation {
+    float: none;
+    display: inline-block;
+  }
+}
+
 .pagination__page-number {
   display: inline-block;
   padding: 10px;
