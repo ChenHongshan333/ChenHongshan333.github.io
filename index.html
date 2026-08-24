@@ -3,56 +3,57 @@ layout: default
 robots: noindex
 ---
 
-<!--<div class="main-post-list">-->
+<div class="project-filter">
+  <button class="project-filter__btn active" data-filter="all">All</button>
+  <button class="project-filter__btn" data-filter="Research">Research</button>
+  <button class="project-filter__btn" data-filter="AI/ML">AI/ML</button>
+  <button class="project-filter__btn" data-filter="Backend">Backend</button>
+  <button class="project-filter__btn" data-filter="Frontend">Frontend</button>
+  <button class="project-filter__btn" data-filter="Desktop App">Desktop App</button>
+  <button class="project-filter__btn" data-filter="UX Design">UX Design</button>
+  <button class="project-filter__btn" data-filter="Computer Graphics">Computer Graphics</button>
+</div>
 
-  <div class="project-filter">
-    <button class="project-filter__btn active" data-filter="all">All</button>
-    <button class="project-filter__btn" data-filter="AI/ML">AI/ML</button>
-    <button class="project-filter__btn" data-filter="Backend">Backend</button>
-    <button class="project-filter__btn" data-filter="Frontend">Frontend</button>
-    <button class="project-filter__btn" data-filter="Desktop App">Desktop App</button>
-    <button class="project-filter__btn" data-filter="UX Design">UX Design</button>
-    <button class="project-filter__btn" data-filter="Computer Graphics">Computer Graphics</button>
-  </div>
+<ul class="timeline">
 
-  <ul class="timeline">
+  {% for project in site.data.projects %}
 
-    {% for project in site.data.projects %}
-
-      <li class="timeline-inverted" data-tags="{{ project.tags | join: ',' }}">
-        <div class="timeline-image">
-          <img class="img-me" src="{{ project.img | prepend: site.baseurl }}" alt="">
-        </div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h4><a href="{% if project.url %}{{ project.url }}{% else %}https://github.com/{{ project.gh_user }}/{{ project.repo }}{% endif %}" target="_blank">{{ project.name }}</a></h4>
-            {% if project.tags %}
-            <div class="project-tags">{% for tag in project.tags %}<span class="project-tag">{{ tag }}</span>{% endfor %}</div>
-            {% endif %}
-          </div>
-          <div class="timeline-body">
-            {% if project.desc %}
-              {{ project.desc | markdownify }}
-            {% else %}
-            <div repotext="{{ project.repo }}">
-              <span class="desc"></div>
-            </div>
-            {% endif %}
-            <div user="{{ project.gh_user }}" repo="{% if project.url %}no-fetch-{{ project.repo }}{% else %}{{ project.repo }}{% endif %}" class="ghbtn" style="margin-top: 10px;">
-              <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers"><i class="fa fa-star"></i><span class="star"> ...</span></a>&emsp;&emsp;
-              <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network"><i class="fa fa-code-fork"></i><span class="fork"> ...</span></a>&emsp;&emsp;
-              <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/watchers"><i class="far fa-eye"></i><span class="watchers"> ...</span></a>
-              <div style="height: 10px;"></div>
-          </div>
-        </div>
-      </li>
-    {% endfor %}
-    <!--
-    <li class="timeline-inverted">
+    <li class="timeline-inverted" data-tags="{{ project.tags | join: ',' }}">
       <div class="timeline-image">
-        <img class="user-image" src="{{site.baseurl}}{{ site.timeline-img }}" alt="">
+        <img class="img-me" src="{{ project.img | prepend: site.baseurl }}" alt="">
       </div>
-    </li> -->
-  </ul>
-
-<!--</div>-->
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4>
+            {% if project.no_gh and project.url == nil %}
+              {{ project.name }}
+            {% else %}
+              <a href="{% if project.url %}{{ project.url }}{% else %}https://github.com/{{ project.gh_user }}/{{ project.repo }}{% endif %}" target="_blank">{{ project.name }}</a>
+            {% endif %}
+          </h4>
+          {% if project.meta %}
+          <div class="project-meta">{{ project.meta }}</div>
+          {% endif %}
+          {% if project.tags %}
+          <div class="project-tags">{% for tag in project.tags %}<span class="project-tag">{{ tag }}</span>{% endfor %}</div>
+          {% endif %}
+        </div>
+        <div class="timeline-body">
+          {% if project.desc %}
+            {{ project.desc | markdownify }}
+          {% else %}
+            <div repotext="{{ project.repo }}"><span class="desc"></span></div>
+          {% endif %}
+          {% unless project.no_gh %}
+          <div user="{{ project.gh_user }}" repo="{% if project.url %}no-fetch-{{ project.repo }}{% else %}{{ project.repo }}{% endif %}" class="ghbtn" style="margin-top: 10px;">
+            <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers"><i class="fa fa-star"></i><span class="star"> ...</span></a>&emsp;&emsp;
+            <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network"><i class="fa fa-code-fork"></i><span class="fork"> ...</span></a>&emsp;&emsp;
+            <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/watchers"><i class="far fa-eye"></i><span class="watchers"> ...</span></a>
+          </div>
+          {% endunless %}
+          <div style="height: 10px;"></div>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

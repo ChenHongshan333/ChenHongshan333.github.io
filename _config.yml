@@ -1,15 +1,14 @@
 # Site settings
 title: Chen Hongshan
-description: 'Business Card Page'
-url: 'https://www.zuehlke.cloud'
+description: 'Personal portfolio of Chen Hongshan — Computer Science undergraduate at NUS, working on LLM & multimodal evaluation, retrieval, and computer graphics.'
+url: 'https://chenhongshan333.github.io'
 baseurl: ''
 profilepic: '/images/Hongshan.jpg'
 bkimage: '/images/bg4.jpg'
-google_analytics: UA-XXXXXX-X
 font_awesome: '2af53778a7.js'
 
 # Blog settings
-blog_title: 'Hongshan Talk'
+blog_title: 'Hongshan is thinking...'
 blog_header_image: '/images/bg.jpg'
 
 author:
@@ -17,7 +16,7 @@ author:
   school_email: e1471281@u.nus.edu
   personal_email: 221654604@qq.com
   github_username:  ChenHongshan333
-  linkedin_username:  thomas-zühlke-889182165
+  linkedin_username:  hongshan-chen-606928366
 #  meetup_name: Azure-Meetup-Rostock-MV
 
 # Build settings
@@ -37,5 +36,3 @@ kramdown:
 
 #plugins: ['jekyll-paginate']
 exclude: ['README.md', 'screenshot-overview.png']
-
-blog_title: 'Hongshan is thinking...'

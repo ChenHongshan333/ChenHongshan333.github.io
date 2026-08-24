@@ -1,9 +1,23 @@
 # projects section data
+- name: LLM Travel-Agent Evaluation System
+  meta: Algorithm Intern, Hotel R&D | Trip.com Group (Ctrip), Shanghai | Jun 2026 - Aug 2026
+  no_gh: true
+  desc: "An end-to-end evaluation system for LLM travel agents — corpus construction, question generation, answer keys grounded in mechanically decidable attributes, automated answer-quality scoring, and leaderboards — built to produce rankings that survive re-runs, addressing the non-reproducibility of LLM-as-judge grading. Reliability was validated through sample-size and ranking-stability analysis (130 questions × 5 models × 3 runs = 1,950 evaluations). First-author manuscript in preparation, with submission planned for late 2026."
+  img: /images/eval.svg
+  tags: [Research, AI/ML]
+
+- name: Long-Horizon Evaluation Benchmark for Video World Models
+  meta: Undergraduate Researcher | NUS Odyssey Research Programme | May 2026 - Present
+  no_gh: true
+  desc: "A benchmark testing whether generated videos preserve evidence and maintain a consistent 3D world across camera departure, occlusion, viewpoint changes, and revisits. Controlled synthetic data is generated in Unreal Engine 5 (scripted camera trajectories, revisit paths, per-object segmentation) so that failures are attributable to the model rather than to uncontrolled scene variation. Manuscript in preparation for submission."
+  img: /images/worldmodel.svg
+  tags: [Research, AI/ML, Computer Graphics]
+
 - name: NetEase Cloud Music Intelligent Customer Support Agent (Minimal RAG)
   gh_user: ChenHongshan333
   repo: NetEase-music-agent-backend-demo
   url: https://chenhongshan333.github.io/NetEase-music-agent-backend-demo/
-  desc: "A lightweight Retrieval-Augmented Generation (RAG) backend for high-volume customer support scenarios, with production-minded engineering (profiles, Docker infra, caching, and degradation drills)."
+  desc: "A RAG support-agent backend in Spring Boot with top-K retrieval and query normalisation, plus a no-evidence refusal gate that short-circuits generation when retrieval returns zero hits — trading answer coverage for groundedness so the agent declines rather than fabricates. A load-testing harness (500 requests @ concurrency 20) diagnosed a JDBC connection-pool ceiling, raising throughput 3.5 → 8.3 req/s."
   img: /images/n.png
   tags: [AI/ML, Backend]
 
@@ -11,7 +25,7 @@
   gh_user: ChenHongshan333
   repo: harmonia
   url: https://devpost.com/software/harmonia-fnxts1
-  desc: "A review filtering system powered by AI models we trained (FastBERT + Qwen3-8B multimodal, with RAG/FAISS) to separate genuine customer feedback from spam and ads in real time."
+  desc: "A 4-stage cascaded multimodal pipeline for four-way review-quality classification on Google location reviews: rule-based filtering → FastBERT with entropy-based confidence routing → Qwen3-8B + CLIP text–image alignment → RAG verification over a FAISS index, served via vLLM. Reaches ~92% accuracy at ~150ms/sample — roughly 5 points above the latency-matched blend of the two endpoint models."
   img: /images/tt.jpg
   tags: [AI/ML]
 
