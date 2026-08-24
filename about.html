@@ -73,88 +73,237 @@ robots: noindex
 
   <h1>Skills</h1>
   <hr class="section-title__divider">
-  <section class="skills-section">
-    <div class="skills-section">
-      <p><strong>AI &amp; Machine Learning</strong></p>
-      <ul>
-        <li>Evaluation &amp; experiment design:
-          <ul style="list-style-type: circle;">
-            <li>Working knowledge: offline evaluation and metric design; benchmark construction (question generation,
-              answer keys grounded in mechanically decidable attributes, automated answer-quality scoring);
-              statistical experiment design (sample-size and ranking-stability analysis); qualitative open coding
-              with entropy-based saturation analysis</li>
-          </ul>
-        </li>
-        <li>Information retrieval &amp; LLM systems:
-          <ul style="list-style-type: circle;">
-            <li>Working knowledge: RAG pipeline design and integration; query understanding and normalisation;
-              retrieval corpus construction; LLM agents (planning, tool use); prompt engineering and output control
-              (Qwen, ChatGPT); OpenAI-compatible APIs (e.g., DashScope)</li>
-            <li>Basic: FAISS (vector indexing and similarity retrieval)</li>
-          </ul>
-        </li>
-        <li>Multimodal, NLP &amp; vision:
-          <ul style="list-style-type: circle;">
-            <li>Working knowledge: BERT/FastBERT (text classification and filtering); CLIP (multimodal
-              representation and text&ndash;image alignment); video understanding and video world model evaluation</li>
-            <li>Basic: PyTorch; NumPy; Transformers (inference and experimentation workflow)</li>
-            <li>Familiar: vLLM (inference serving)</li>
-          </ul>
-        </li>
-      </ul>
 
-      <p><strong>Programming Languages</strong></p>
-      <ul>
-        <li>Proficient: Python, Java</li>
-        <li>Working knowledge: C++, SQL, JavaScript, HTML/CSS</li>
-        <li>Basic: C</li>
-      </ul>
+  <p class="skills-legend">
+    <span class="skills-legend__item skills-legend__item--proficient">Proficient</span>
+    <span class="skills-legend__item skills-legend__item--working">Working knowledge</span>
+    <span class="skills-legend__item skills-legend__item--basic">Basic</span>
+    <span class="skills-legend__item skills-legend__item--familiar">Familiar</span>
+  </p>
 
-      <p><strong>Graphics &amp; Interactive Media</strong></p>
-      <ul>
-        <li>Working knowledge: OpenGL (transformations, lighting and shading, Bezier modelling, ray tracing); mesh
-          processing and computational geometry in C++; Blender (modelling, rigging, keyframe animation, particle
-          VFX)</li>
-        <li>Familiar: Unreal Engine 5 (scripted camera trajectories, per-object segmentation, synthetic data
-          generation); JavaFX; Figma, Miro (design &amp; prototyping)</li>
-      </ul>
+  <div class="skills-grid">
 
-      <p><strong>Backend Development &amp; APIs</strong></p>
-      <ul>
-        <li>Proficient: Spring Boot, RESTful API design and implementation</li>
-        <li>Working knowledge: Spring JPA; Maven (dependency management, build &amp; packaging); Swagger/OpenAPI (API
-          documentation &amp; testing); OkHttp (HTTP client integration); async Python (concurrent worker pipelines)</li>
-      </ul>
-
-      <p><strong>Data &amp; Storage</strong></p>
-      <ul>
-        <li>Working knowledge: MySQL (schema &amp; CRUD), H2 (local dev/demo), Redis (cache integration &amp;
-          basic operations)</li>
-      </ul>
-
-      <p><strong>Engineering &amp; DevOps</strong></p>
-      <ul>
-        <li>Working knowledge: Docker &amp; docker-compose (one-command dependencies with volumes and healthchecks);
-          Spring Profiles (dev/prod separation); Git and GitHub; Playwright (browser automation and crawling);
-          Linux/CLI</li>
-        <li>Familiar: GitHub Actions (CI); Prometheus (metrics); load testing, retry/circuit-breaker and idempotency
-          patterns; reproducible setup and graceful degradation (configuration layering, environment variables,
-          README-aligned setup)</li>
-      </ul>
-
-      <p><strong>Documentation &amp; Productivity Tools</strong></p>
-      <ul>
-        <li>Proficient: Git, GitHub, Markdown</li>
-        <li>Working knowledge: Mermaid (diagrams); JetBrains IDEs; Microsoft Office
-          (Word/PowerPoint/Excel); Aseprite (pixel art)</li>
-      </ul>
-
+    <div class="skill-card">
+      <div class="skill-card__kicker">AI &amp; ML</div>
+      <h3 class="skill-card__title">Evaluation &amp; Experiment Design</h3>
+      <div class="skill-level skill-level--working">
+        <span class="skill-level__label">Working knowledge</span>
+        <span class="skill-chips">
+          <span class="skill-chip">Evaluation &amp; metric design</span>
+          <span class="skill-chip">Benchmark construction</span>
+          <span class="skill-chip">Mechanically decidable answer keys</span>
+          <span class="skill-chip">Answer-quality scoring</span>
+          <span class="skill-chip">Ranking-stability analysis</span>
+          <span class="skill-chip">Statistical experiment design</span>
+          <span class="skill-chip">Open coding &amp; saturation analysis</span>
+          <span class="skill-chip">Engagement-weighted sampling</span>
+        </span>
+      </div>
     </div>
-  </section>
+
+    <div class="skill-card">
+      <div class="skill-card__kicker">AI &amp; ML</div>
+      <h3 class="skill-card__title">Information Retrieval &amp; LLM Systems</h3>
+      <div class="skill-level skill-level--working">
+        <span class="skill-level__label">Working knowledge</span>
+        <span class="skill-chips">
+          <span class="skill-chip">RAG pipeline design</span>
+          <span class="skill-chip">Query understanding</span>
+          <span class="skill-chip">Retrieval corpus construction</span>
+          <span class="skill-chip">LLM agents</span>
+          <span class="skill-chip">Prompt engineering</span>
+          <span class="skill-chip">OpenAI-compatible APIs</span>
+        </span>
+      </div>
+      <div class="skill-level skill-level--basic">
+        <span class="skill-level__label">Basic</span>
+        <span class="skill-chips">
+          <span class="skill-chip">FAISS</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__kicker">AI &amp; ML</div>
+      <h3 class="skill-card__title">Multimodal, NLP &amp; Vision</h3>
+      <div class="skill-level skill-level--working">
+        <span class="skill-level__label">Working knowledge</span>
+        <span class="skill-chips">
+          <span class="skill-chip">BERT / FastBERT</span>
+          <span class="skill-chip">CLIP</span>
+          <span class="skill-chip">Video understanding</span>
+          <span class="skill-chip">Video world model evaluation</span>
+        </span>
+      </div>
+      <div class="skill-level skill-level--basic">
+        <span class="skill-level__label">Basic</span>
+        <span class="skill-chips">
+          <span class="skill-chip">PyTorch</span>
+          <span class="skill-chip">NumPy</span>
+          <span class="skill-chip">Transformers</span>
+        </span>
+      </div>
+      <div class="skill-level skill-level--familiar">
+        <span class="skill-level__label">Familiar</span>
+        <span class="skill-chips">
+          <span class="skill-chip">vLLM</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__kicker">Graphics</div>
+      <h3 class="skill-card__title">Real-Time Graphics &amp; 3D</h3>
+      <div class="skill-level skill-level--working">
+        <span class="skill-level__label">Working knowledge</span>
+        <span class="skill-chips">
+          <span class="skill-chip">OpenGL</span>
+          <span class="skill-chip">Camera &amp; transformations</span>
+          <span class="skill-chip">Lighting &amp; shading</span>
+          <span class="skill-chip">Bezier curve modelling</span>
+          <span class="skill-chip">Ray tracing</span>
+          <span class="skill-chip">Mesh processing &amp; geometry</span>
+          <span class="skill-chip">Blender (rigging, VFX)</span>
+          <span class="skill-chip">Unreal Engine 5</span>
+          <span class="skill-chip">Synthetic data generation</span>
+        </span>
+      </div>
+      <div class="skill-level skill-level--familiar">
+        <span class="skill-level__label">Familiar</span>
+        <span class="skill-chips">
+          <span class="skill-chip">JavaFX</span>
+          <span class="skill-chip">Aseprite</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__kicker">Design</div>
+      <h3 class="skill-card__title">Interaction &amp; UI Design</h3>
+      <div class="skill-level skill-level--working">
+        <span class="skill-level__label">Working knowledge</span>
+        <span class="skill-chips">
+          <span class="skill-chip">Figma</span>
+          <span class="skill-chip">Miro</span>
+          <span class="skill-chip">Wireframing &amp; prototyping</span>
+          <span class="skill-chip">User research &amp; personas</span>
+          <span class="skill-chip">Heuristic evaluation</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__kicker">Foundations</div>
+      <h3 class="skill-card__title">Programming Languages</h3>
+      <div class="skill-level skill-level--proficient">
+        <span class="skill-level__label">Proficient</span>
+        <span class="skill-chips">
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">Java</span>
+        </span>
+      </div>
+      <div class="skill-level skill-level--working">
+        <span class="skill-level__label">Working knowledge</span>
+        <span class="skill-chips">
+          <span class="skill-chip">C++</span>
+          <span class="skill-chip">SQL</span>
+          <span class="skill-chip">JavaScript</span>
+          <span class="skill-chip">HTML / CSS</span>
+        </span>
+      </div>
+      <div class="skill-level skill-level--basic">
+        <span class="skill-level__label">Basic</span>
+        <span class="skill-chips">
+          <span class="skill-chip">C</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__kicker">Engineering</div>
+      <h3 class="skill-card__title">Backend Development &amp; APIs</h3>
+      <div class="skill-level skill-level--proficient">
+        <span class="skill-level__label">Proficient</span>
+        <span class="skill-chips">
+          <span class="skill-chip">Spring Boot</span>
+          <span class="skill-chip">RESTful API design</span>
+        </span>
+      </div>
+      <div class="skill-level skill-level--working">
+        <span class="skill-level__label">Working knowledge</span>
+        <span class="skill-chips">
+          <span class="skill-chip">Spring Data JPA</span>
+          <span class="skill-chip">Maven</span>
+          <span class="skill-chip">Swagger / OpenAPI</span>
+          <span class="skill-chip">OkHttp</span>
+          <span class="skill-chip">async Python</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__kicker">Engineering</div>
+      <h3 class="skill-card__title">Data &amp; Storage</h3>
+      <div class="skill-level skill-level--working">
+        <span class="skill-level__label">Working knowledge</span>
+        <span class="skill-chips">
+          <span class="skill-chip">MySQL</span>
+          <span class="skill-chip">Redis</span>
+          <span class="skill-chip">H2</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__kicker">Engineering</div>
+      <h3 class="skill-card__title">Infrastructure &amp; Reliability</h3>
+      <div class="skill-level skill-level--working">
+        <span class="skill-level__label">Working knowledge</span>
+        <span class="skill-chips">
+          <span class="skill-chip">Docker &amp; docker-compose</span>
+          <span class="skill-chip">Spring Profiles</span>
+          <span class="skill-chip">Playwright</span>
+          <span class="skill-chip">Linux / CLI</span>
+        </span>
+      </div>
+      <div class="skill-level skill-level--familiar">
+        <span class="skill-level__label">Familiar</span>
+        <span class="skill-chips">
+          <span class="skill-chip">GitHub Actions</span>
+          <span class="skill-chip">Prometheus</span>
+          <span class="skill-chip">Load testing</span>
+          <span class="skill-chip">Retry &amp; circuit breaker</span>
+          <span class="skill-chip">Idempotent writes</span>
+          <span class="skill-chip">Graceful degradation</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card__kicker">Tooling</div>
+      <h3 class="skill-card__title">Documentation &amp; Productivity</h3>
+      <div class="skill-level skill-level--proficient">
+        <span class="skill-level__label">Proficient</span>
+        <span class="skill-chips">
+          <span class="skill-chip">Git</span>
+          <span class="skill-chip">GitHub</span>
+          <span class="skill-chip">Markdown</span>
+        </span>
+      </div>
+      <div class="skill-level skill-level--working">
+        <span class="skill-level__label">Working knowledge</span>
+        <span class="skill-chips">
+          <span class="skill-chip">Mermaid</span>
+          <span class="skill-chip">JetBrains IDEs</span>
+          <span class="skill-chip">Microsoft Office</span>
+        </span>
+      </div>
+    </div>
+
+  </div>
 
   <br>
   <br>
-
 
 
   <h1>Experience</h1>
