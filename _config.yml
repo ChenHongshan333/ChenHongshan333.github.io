@@ -8,6 +8,8 @@ bkimage: '/images/bg4.jpg'
 font_awesome: '2af53778a7.js'
 
 # Blog settings
+# Master switch for the Blog section. See 0824_hidden_blog.md to re-enable.
+blog_enabled: false
 blog_title: 'Hongshan is thinking...'
 blog_header_image: '/images/bg.jpg'
 
@@ -35,4 +37,6 @@ kramdown:
   hard_wrap: false
 
 #plugins: ['jekyll-paginate']
-exclude: ['README.md', 'screenshot-overview.png']
+# 'blog.html' is excluded only while blog_enabled is false; remove it from this
+# list when re-enabling. '0824_hidden_blog.md' is an internal note, never published.
+exclude: ['README.md', 'screenshot-overview.png', 'blog.html', '0824_hidden_blog.md']
