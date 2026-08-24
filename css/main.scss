@@ -277,6 +277,29 @@ pre.highlight code,
   .course-ongoing { margin-left: 0; }
 }
 
+/* Experience / project entries reuse the disclosure pattern */
+.entry .entry__title {
+  font-size: 1.02em;
+  line-height: 1.4;
+}
+
+.entry > .course-group__summary {
+  padding: 14px 4px;
+}
+
+.entry__body {
+  padding: 2px 4px 18px 4px;
+}
+
+.entry__body > p:last-child,
+.entry__body > ul:last-child {
+  margin-bottom: 0;
+}
+
+.entry__body ul {
+  margin-bottom: 1em;
+}
+
 /* ---- Skills ---- */
 .skills-legend {
   display: flex;

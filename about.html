@@ -360,60 +360,66 @@ robots: noindex
 
   <h1>Experience</h1>
   <hr class="section-title__divider">
-  <div class="about-section">
+  <div class="about-section course-groups">
     <!-- 1) Trip.com Group (Ctrip) -->
-    <article class="project">
-      <h3>Algorithm Intern | LLM Agent Evaluation, Hotel R&amp;D</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">Algorithm Intern | LLM Agent Evaluation, Hotel R&amp;D</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Organisation:</strong> Trip.com Group (Ctrip), Shanghai, China</p>
+        <p><strong>Organisation:</strong> Trip.com Group (Ctrip), Shanghai, China</p>
 
-      <p><strong>Description:</strong> An end-to-end evaluation system for LLM travel agents, owned independently
-        &mdash; corpus construction, question generation, answer keys grounded in mechanically decidable attributes,
-        automated answer-quality scoring, and leaderboards &mdash; built to produce rankings that survive re-runs,
-        addressing the non-reproducibility of LLM-as-judge grading.</p>
+        <p><strong>Description:</strong> An end-to-end evaluation system for LLM travel agents, owned independently
+          &mdash; corpus construction, question generation, answer keys grounded in mechanically decidable attributes,
+          automated answer-quality scoring, and leaderboards &mdash; built to produce rankings that survive re-runs,
+          addressing the non-reproducibility of LLM-as-judge grading.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>Derived a query intent taxonomy (room type, restaurants, cancellation policy, &hellip;) from real user
-          discussions via open coding with entropy-based saturation analysis, then applied engagement-weighted
-          sampling to align benchmark coverage with the observed query distribution.</li>
-        <li>Validated reliability through sample-size and ranking-stability analysis (130 questions &times; 5 models
-          &times; 3 runs = 1,950 evaluations), establishing how many items are needed before the leaderboard ordering
-          stops moving.</li>
-        <li>Engineered a concurrent Python pipeline (async workers, Playwright, cascaded LLM filtering) that crawls,
-          deduplicates, and validates real user discussions into a structured retrieval corpus.</li>
-        <li>Preparing a first-author manuscript, with submission planned for late 2026.</li>
-      </ul>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Derived a query intent taxonomy (room type, restaurants, cancellation policy, &hellip;) from real user
+            discussions via open coding with entropy-based saturation analysis, then applied engagement-weighted
+            sampling to align benchmark coverage with the observed query distribution.</li>
+          <li>Validated reliability through sample-size and ranking-stability analysis (130 questions &times; 5 models
+            &times; 3 runs = 1,950 evaluations), establishing how many items are needed before the leaderboard ordering
+            stops moving.</li>
+          <li>Engineered a concurrent Python pipeline (async workers, Playwright, cascaded LLM filtering) that crawls,
+            deduplicates, and validates real user discussions into a structured retrieval corpus.</li>
+          <li>Preparing a first-author manuscript, with submission planned for late 2026.</li>
+        </ul>
 
-      <p><strong>Duration:</strong> Jun 2026 - Aug 2026</p>
-      <p><strong>Tech Stack:</strong> Python | async Python | Playwright | LLM APIs | Evaluation &amp; Metric Design |
-        Statistical Experiment Design</p>
-    </article>
-
-    <br>
+        <p><strong>Duration:</strong> Jun 2026 - Aug 2026</p>
+        <p><strong>Tech Stack:</strong> Python | async Python | Playwright | LLM APIs | Evaluation &amp; Metric Design |
+          Statistical Experiment Design</p>
+      </div>
+    </details>
 
     <!-- 2) NUS Odyssey Research Programme -->
-    <article class="project">
-      <h3>Undergraduate Researcher | NUS Odyssey Research Programme</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">Undergraduate Researcher | NUS Odyssey Research Programme</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Organisation:</strong> National University of Singapore, Singapore</p>
+        <p><strong>Organisation:</strong> National University of Singapore, Singapore</p>
 
-      <p><strong>Description:</strong> Co-designed a long-horizon evaluation benchmark for video world models,
-        testing whether generated videos preserve evidence and maintain a consistent 3D world across camera
-        departure, occlusion, viewpoint changes, and revisits. Manuscript in preparation for submission.</p>
+        <p><strong>Description:</strong> Co-designed a long-horizon evaluation benchmark for video world models,
+          testing whether generated videos preserve evidence and maintain a consistent 3D world across camera
+          departure, occlusion, viewpoint changes, and revisits. Manuscript in preparation for submission.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>Generated controlled synthetic data in Unreal Engine 5 (scripted camera trajectories, revisit paths,
-          per-object segmentation) &mdash; chosen over in-the-wild video so that failures are attributable to the
-          model rather than to uncontrolled scene variation.</li>
-        <li>Contributed to designing quantitative metrics and evaluation protocols for reproducibly measuring these
-          failure modes across models.</li>
-      </ul>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Generated controlled synthetic data in Unreal Engine 5 (scripted camera trajectories, revisit paths,
+            per-object segmentation) &mdash; chosen over in-the-wild video so that failures are attributable to the
+            model rather than to uncontrolled scene variation.</li>
+          <li>Contributed to designing quantitative metrics and evaluation protocols for reproducibly measuring these
+            failure modes across models.</li>
+        </ul>
 
-      <p><strong>Duration:</strong> May 2026 - Present</p>
-      <p><strong>Tech Stack:</strong> Unreal Engine 5 | Python | Video Understanding | Evaluation Protocol Design</p>
-    </article>
+        <p><strong>Duration:</strong> May 2026 - Present</p>
+        <p><strong>Tech Stack:</strong> Unreal Engine 5 | Python | Video Understanding | Evaluation Protocol Design</p>
+      </div>
+    </details>
   </div>
 
   <br>
@@ -421,276 +427,298 @@ robots: noindex
 
   <h1>Projects</h1>
   <hr class="section-title__divider">
-  <div class="about-section">
+  <div class="about-section course-groups">
     <!-- 1) NetEase -->
-    <article class="project">
-      <h3>NetEase Cloud Music Intelligent Customer Support Agent (Minimal RAG)</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">NetEase Cloud Music Intelligent Customer Support Agent (Minimal RAG)</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Description:</strong> A minimal RAG-based customer support agent backend that integrates retrieval,
-        guarded prompting, and reproducible local deployment.</p>
+        <p><strong>Description:</strong> A minimal RAG-based customer support agent backend that integrates retrieval,
+          guarded prompting, and reproducible local deployment.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>Implemented RESTful endpoints with Swagger/OpenAPI for rapid testing and demo recording.</li>
-        <li>Built a dev/prod configuration split using Spring Profiles (dev with H2; prod with MySQL + Redis).</li>
-        <li>Added a Redis cache with TTL and graceful fallback, keeping the main request path available even when Redis
-          is down.</li>
-        <li>Containerized dependencies via docker-compose (MySQL + Redis with volumes and healthchecks) for one-command
-          local setup.</li>
-        <li>Maintained an architecture-first README (Mermaid diagrams and startup steps) aligned with the
-          implementation.</li>
-      </ul>
-      <p><strong>Project Link:</strong> <a href="https://chenhongshan333.github.io/NetEase-music-agent-backend-demo/"
-          target="_blank">NetEase-music-agent-backend-demo</a></p>
-      <p><strong>Duration:</strong> Dec 2025 - Jan 2026</p>
-      <p><strong>Tech Stack:</strong> Java | Spring Boot | Spring Data JPA | Maven | H2 | MySQL | Redis | Docker Compose
-        | Swagger/OpenAPI | OkHttp | OpenAI-compatible LLM API</p>
-    </article>
-
-    <br>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Implemented RESTful endpoints with Swagger/OpenAPI for rapid testing and demo recording.</li>
+          <li>Built a dev/prod configuration split using Spring Profiles (dev with H2; prod with MySQL + Redis).</li>
+          <li>Added a Redis cache with TTL and graceful fallback, keeping the main request path available even when Redis
+            is down.</li>
+          <li>Containerized dependencies via docker-compose (MySQL + Redis with volumes and healthchecks) for one-command
+            local setup.</li>
+          <li>Maintained an architecture-first README (Mermaid diagrams and startup steps) aligned with the
+            implementation.</li>
+        </ul>
+        <p><strong>Project Link:</strong> <a href="https://chenhongshan333.github.io/NetEase-music-agent-backend-demo/"
+            target="_blank">NetEase-music-agent-backend-demo</a></p>
+        <p><strong>Duration:</strong> Dec 2025 - Jan 2026</p>
+        <p><strong>Tech Stack:</strong> Java | Spring Boot | Spring Data JPA | Maven | H2 | MySQL | Redis | Docker Compose
+          | Swagger/OpenAPI | OkHttp | OpenAI-compatible LLM API</p>
+      </div>
+    </details>
 
     <!-- 2) Harmonia -->
-    <article class="project">
-      <h3>Harmonia: Hierarchical Multimodal Hybrid Review Validation with RAG</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">Harmonia: Hierarchical Multimodal Hybrid Review Validation with RAG</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Description:</strong> A hierarchical review filtering system using AI models we trained, routing
-        requests
-        across fast and accurate stages to separate genuine feedback from spam at scale.</p>
+        <p><strong>Description:</strong> A hierarchical review filtering system using AI models we trained, routing
+          requests
+          across fast and accurate stages to separate genuine feedback from spam at scale.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>Designed a multi-stage pipeline: rule-based preprocessing → fast classifier routing → multimodal validation
-          → RAG-backed final verification.</li>
-        <li>Trained and evaluated text classification models (e.g., FastBERT/BERT-family) and integrated
-          confidence-based routing to balance latency and accuracy.</li>
-        <li>Incorporated multimodal signals (e.g., CLIP) to handle cases where text-only signals are insufficient.</li>
-        <li>Supported both single-review and batch processing workflows for practical experimentation and benchmarking.
-        </li>
-      </ul>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Designed a multi-stage pipeline: rule-based preprocessing → fast classifier routing → multimodal validation
+            → RAG-backed final verification.</li>
+          <li>Trained and evaluated text classification models (e.g., FastBERT/BERT-family) and integrated
+            confidence-based routing to balance latency and accuracy.</li>
+          <li>Incorporated multimodal signals (e.g., CLIP) to handle cases where text-only signals are insufficient.</li>
+          <li>Supported both single-review and batch processing workflows for practical experimentation and benchmarking.
+          </li>
+        </ul>
 
-      <p><strong>Project Link:</strong> <a href="https://devpost.com/software/harmonia-fnxts1"
-          target="_blank">Harmonia</a></p>
-      <p><strong>Duration:</strong> Aug 2025 - Sep 2025</p>
-      <p><strong>Tech Stack:</strong> Python | PyTorch | Transformers | FastBERT/BERT-family | CLIP | FAISS | Qwen | RAG
-        | vLLM (inference) | OpenAI APIs</p>
-    </article>
-
-    <br>
+        <p><strong>Project Link:</strong> <a href="https://devpost.com/software/harmonia-fnxts1"
+            target="_blank">Harmonia</a></p>
+        <p><strong>Duration:</strong> Aug 2025 - Sep 2025</p>
+        <p><strong>Tech Stack:</strong> Python | PyTorch | Transformers | FastBERT/BERT-family | CLIP | FAISS | Qwen | RAG
+          | vLLM (inference) | OpenAI APIs</p>
+      </div>
+    </details>
 
     <!-- 3) Grid Adventure Agent -->
-    <article class="project">
-      <h3>Grid Adventure Agent</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">Grid Adventure Agent</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Description:</strong> An AI agent that plays Grid Adventure, a tile-based puzzle game, by planning
-        optimal action sequences using A* search.</p>
+        <p><strong>Description:</strong> An AI agent that plays Grid Adventure, a tile-based puzzle game, by planning
+          optimal action sequences using A* search.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>Designed an A* search planner to compute optimal action sequences for navigating tile-based puzzle states.
-        </li>
-        <li>Supported two input modes: structured game state (Task 1) and raw pixel image perception (Task 2/3),
-          requiring vision-based state extraction.</li>
-        <li>Evaluated agent performance across varying grid complexities and input fidelity conditions.</li>
-      </ul>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Designed an A* search planner to compute optimal action sequences for navigating tile-based puzzle states.
+          </li>
+          <li>Supported two input modes: structured game state (Task 1) and raw pixel image perception (Task 2/3),
+            requiring vision-based state extraction.</li>
+          <li>Evaluated agent performance across varying grid complexities and input fidelity conditions.</li>
+        </ul>
 
-      <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/Grid-Adventure-Agent"
-          target="_blank">Grid Adventure Agent Github Repo</a></p>
-      <p><strong>Duration:</strong> Jan 2026 - Apr 2026</p>
-      <p><strong>Tech Stack:</strong> Python | Pytourch | A* Search | Image Processing </p>
-    </article>
-
-    <br>
+        <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/Grid-Adventure-Agent"
+            target="_blank">Grid Adventure Agent Github Repo</a></p>
+        <p><strong>Duration:</strong> Jan 2026 - Apr 2026</p>
+        <p><strong>Tech Stack:</strong> Python | Pytourch | A* Search | Image Processing </p>
+      </div>
+    </details>
 
     <!-- 4) HomeRun -->
-    <article class="project">
-      <h3>HomeRun: Co-living Mediator Dashboard</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">HomeRun: Co-living Mediator Dashboard</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Description:</strong> A conceptual desktop system designed to act as a neutral, centralised
-        Co-living Mediator for residents in high-density shared housing, completed as part of NM3243 Interaction Design
-        at NUS.</p>
+        <p><strong>Description:</strong> A conceptual desktop system designed to act as a neutral, centralised
+          Co-living Mediator for residents in high-density shared housing, completed as part of NM3243 Interaction Design
+          at NUS.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>Conducted user research and developed personas, user journeys, and task flows to ground the design in real
-          co-living pain points.</li>
-        <li>Produced low-fi to high-fi prototypes in Figma, iterating based on usability feedback.</li>
-        <li>Designed mediation and communication features to reduce friction between roommates in shared housing
-          scenarios.</li>
-      </ul>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Conducted user research and developed personas, user journeys, and task flows to ground the design in real
+            co-living pain points.</li>
+          <li>Produced low-fi to high-fi prototypes in Figma, iterating based on usability feedback.</li>
+          <li>Designed mediation and communication features to reduce friction between roommates in shared housing
+            scenarios.</li>
+        </ul>
 
-      <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/NM3243-HomeRun-UX-Design-Coursework"
-          target="_blank">HomeRun GitHub Repo</a></p>
-      <p><strong>Duration:</strong> Jan 2026 - Apr 2026</p>
-      <p><strong>Tech Stack:</strong> Figma | Miro | UX Design</p>
-    </article>
-
-    <br>
+        <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/NM3243-HomeRun-UX-Design-Coursework"
+            target="_blank">HomeRun GitHub Repo</a></p>
+        <p><strong>Duration:</strong> Jan 2026 - Apr 2026</p>
+        <p><strong>Tech Stack:</strong> Figma | Miro | UX Design</p>
+      </div>
+    </details>
 
     <!-- 5) PropBank -->
-    <article class="project">
-      <h3>PropBank: MarketPlace Service (CS3240 Individual Portfolio)</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">PropBank: MarketPlace Service (CS3240 Individual Portfolio)</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Description:</strong> An individual portfolio for CS3240 Interaction Design at NUS, documenting
-        personal contributions and design reflections on the MarketPlace service of PropBank — a super app
-        built around a cosplay-rooted ecosystem.</p>
+        <p><strong>Description:</strong> An individual portfolio for CS3240 Interaction Design at NUS, documenting
+          personal contributions and design reflections on the MarketPlace service of PropBank — a super app
+          built around a cosplay-rooted ecosystem.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>Contributed to the design and iteration of the MarketPlace service within a group UX project.</li>
-        <li>Documented individual design decisions, rationale, and reflections aligned with Interaction Design
-          principles.</li>
-        <li>Applied user-centred design methods including wireframing, prototyping, and heuristic evaluation.</li>
-      </ul>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Contributed to the design and iteration of the MarketPlace service within a group UX project.</li>
+          <li>Documented individual design decisions, rationale, and reflections aligned with Interaction Design
+            principles.</li>
+          <li>Applied user-centred design methods including wireframing, prototyping, and heuristic evaluation.</li>
+        </ul>
 
-      <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/PropBank-individual-portfolio"
-          target="_blank">PropBank Portfolio Github Repo</a></p>
-      <p><strong>Duration:</strong> Jan 2026 - Apr 2026</p>
-      <p><strong>Tech Stack:</strong> Figma | Next.js | TypeScript | UX & UI Design | </p>
-    </article>
-
-  <br>
+        <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/PropBank-individual-portfolio"
+            target="_blank">PropBank Portfolio Github Repo</a></p>
+        <p><strong>Duration:</strong> Jan 2026 - Apr 2026</p>
+        <p><strong>Tech Stack:</strong> Figma | Next.js | TypeScript | UX & UI Design | </p>
+      </div>
+    </details>
 
 
     <!-- Fleet Dashboard -->
-    <article class="project">
-      <h3>Fleet Dashboard</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">Fleet Dashboard</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Description:</strong> A vehicle fleet management web app built for an
-        automotive rental context, supporting real-time tracking and full CRUD operations
-        on vehicle records.</p>
+        <p><strong>Description:</strong> A vehicle fleet management web app built for an
+          automotive rental context, supporting real-time tracking and full CRUD operations
+          on vehicle records.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>Built full CRUD operations on vehicle records including plate number, model,
-          status, date, and notes.</li>
-        <li>Implemented real-time search and status filtering (Available / Rented /
-          Maintenance) with colour-coded indicators to support quick operational decisions.</li>
-        <li>Applied React hooks (useState, useEffect) for state management and localStorage
-          persistence, translating fleet management requirements into a clean, responsive UI.</li>
-      </ul>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Built full CRUD operations on vehicle records including plate number, model,
+            status, date, and notes.</li>
+          <li>Implemented real-time search and status filtering (Available / Rented /
+            Maintenance) with colour-coded indicators to support quick operational decisions.</li>
+          <li>Applied React hooks (useState, useEffect) for state management and localStorage
+            persistence, translating fleet management requirements into a clean, responsive UI.</li>
+        </ul>
 
-      <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/fleet-dashboard" target="_blank">Fleet
-          Dashboard Github Repo</a></p>
-      <p><strong>Duration:</strong> Apr 2026 - Present</p>
-      <p><strong>Tech Stack:</strong> React | Vite | JavaScript | localStorage</p>
-    </article>
-
-    <br>
+        <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/fleet-dashboard" target="_blank">Fleet
+            Dashboard Github Repo</a></p>
+        <p><strong>Duration:</strong> Apr 2026 - Present</p>
+        <p><strong>Tech Stack:</strong> React | Vite | JavaScript | localStorage</p>
+      </div>
+    </details>
 
     <!-- 6) Mintty Task Manager -->
-    <article class="project">
-      <h3>Mintty: Task Manager</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">Mintty: Task Manager</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Description:</strong> A desktop task management application optimized for CLI users, combining the
-        efficiency of command-line interaction with the clarity of a GUI. Built with strict adherence to Object-Oriented
-        Programming principles for maintainable and extensible code architecture.</p>
+        <p><strong>Description:</strong> A desktop task management application optimized for CLI users, combining the
+          efficiency of command-line interaction with the clarity of a GUI. Built with strict adherence to Object-Oriented
+          Programming principles for maintainable and extensible code architecture.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>OOP Design: Implemented comprehensive object-oriented architecture with proper
-          encapsulation, inheritance (Todo/Deadline/Event extending abstract Task class), and polymorphism for command
-          handling.</li>
-        <li>Applied SOLID principles throughout the codebase, ensuring separation of concerns between UI, logic, and
-          storage layers.</li>
-        <li>Built three task types (Todo, Deadline, Event) with natural language datetime parsing and flexible
-          scheduling capabilities.</li>
-        <li>Designed command pattern implementation with aliases (e.g., <code>todo</code>/<code>td</code>,
-          <code>deadline</code>/<code>ddl</code>) for rapid workflow execution.
-        </li>
-        <li>Implemented smart search functionality with keyword matching and snooze feature for rescheduling tasks.</li>
-        <li>Integrated automatic data persistence with JSON serialization following proper abstraction layers.</li>
-      </ul>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>OOP Design: Implemented comprehensive object-oriented architecture with proper
+            encapsulation, inheritance (Todo/Deadline/Event extending abstract Task class), and polymorphism for command
+            handling.</li>
+          <li>Applied SOLID principles throughout the codebase, ensuring separation of concerns between UI, logic, and
+            storage layers.</li>
+          <li>Built three task types (Todo, Deadline, Event) with natural language datetime parsing and flexible
+            scheduling capabilities.</li>
+          <li>Designed command pattern implementation with aliases (e.g., <code>todo</code>/<code>td</code>,
+            <code>deadline</code>/<code>ddl</code>) for rapid workflow execution.
+          </li>
+          <li>Implemented smart search functionality with keyword matching and snooze feature for rescheduling tasks.</li>
+          <li>Integrated automatic data persistence with JSON serialization following proper abstraction layers.</li>
+        </ul>
 
-      <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/ip" target="_blank">Mintty Github</a>
-      </p>
-      <p><strong>Duration:</strong> Jan 2026 - Apr 2026</p>
-      <p><strong>Tech Stack:</strong> Java 17 | JavaFX GUI | OOP Design Patterns</p>
-    </article>
-
-    <br>
+        <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/ip" target="_blank">Mintty Github</a>
+        </p>
+        <p><strong>Duration:</strong> Jan 2026 - Apr 2026</p>
+        <p><strong>Tech Stack:</strong> Java 17 | JavaFX GUI | OOP Design Patterns</p>
+      </div>
+    </details>
 
     <!-- 7) CatPals Volunteer Operations App -->
-    <article class="project">
-      <h3>CatPals: Volunteer Operations App</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">CatPals: Volunteer Operations App</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Description:</strong> A volunteer operations application adapted from an existing brownfield codebase
-        to support the tracking and management of stray-cat records at NUS. The project focused on improving usability,
-        aligning features with real user needs, and making the system easier to use and maintain.</p>
+        <p><strong>Description:</strong> A volunteer operations application adapted from an existing brownfield codebase
+          to support the tracking and management of stray-cat records at NUS. The project focused on improving usability,
+          aligning features with real user needs, and making the system easier to use and maintain.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>Adapted and extended an existing AB3 brownfield codebase into a context-specific operations app for
-          volunteers managing stray-cat information.</li>
-        <li>Conducted user research and developed user stories to better align the application’s features with actual
-          operational workflows and user needs.</li>
-        <li>Contributed to key functional enhancements such as add, find, edit, export, and other core CRUD-related
-          operations.</li>
-        <li>Improved the JavaFX user interface through layout refinements and CSS customisation, making the application
-          clearer and more user-friendly.</li>
-        <li>Updated major project documentation including the README, User Guide, and Developer Guide to support
-          onboarding, usage, and maintainability.</li>
-        <li>Worked within a structured team workflow using Git, branches, pull requests, merge reviews, weekly meetings,
-          and release packaging for controlled collaboration and delivery.</li>
-      </ul>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Adapted and extended an existing AB3 brownfield codebase into a context-specific operations app for
+            volunteers managing stray-cat information.</li>
+          <li>Conducted user research and developed user stories to better align the application’s features with actual
+            operational workflows and user needs.</li>
+          <li>Contributed to key functional enhancements such as add, find, edit, export, and other core CRUD-related
+            operations.</li>
+          <li>Improved the JavaFX user interface through layout refinements and CSS customisation, making the application
+            clearer and more user-friendly.</li>
+          <li>Updated major project documentation including the README, User Guide, and Developer Guide to support
+            onboarding, usage, and maintainability.</li>
+          <li>Worked within a structured team workflow using Git, branches, pull requests, merge reviews, weekly meetings,
+            and release packaging for controlled collaboration and delivery.</li>
+        </ul>
 
-      <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/tp" target="_blank">CatPals
-          GitHub</a></p>
-      <p><strong>Duration:</strong> Jan 2026 - Present</p>
-      <p><strong>Tech Stack:</strong> Java | JavaFX | CSS | Git/GitHub | Brownfield Software Engineering</p>
-    </article>
-
-    <br>
+        <p><strong>Project Link:</strong> <a href="https://github.com/ChenHongshan333/tp" target="_blank">CatPals
+            GitHub</a></p>
+        <p><strong>Duration:</strong> Jan 2026 - Present</p>
+        <p><strong>Tech Stack:</strong> Java | JavaFX | CSS | Git/GitHub | Brownfield Software Engineering</p>
+      </div>
+    </details>
 
     <!-- 8) OpenGL -->
-    <article class="project">
-      <h3>OpenGL Graphics Coursework</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">OpenGL Graphics Coursework</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Description:</strong> A collection of OpenGL-based coursework demos exploring core real-time rendering
-        concepts and interactive controls.</p>
+        <p><strong>Description:</strong> A collection of OpenGL-based coursework demos exploring core real-time rendering
+          concepts and interactive controls.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>Implemented graphics pipeline fundamentals, including transformations, camera controls, and scene
-          organization.</li>
-        <li>Built shader-based rendering effects (e.g., lighting, materials, and texturing) as part of course
-          assignments.</li>
-        <li>Added interactive input handling for navigation and parameter tuning during demos.</li>
-      </ul>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Implemented graphics pipeline fundamentals, including transformations, camera controls, and scene
+            organization.</li>
+          <li>Built shader-based rendering effects (e.g., lighting, materials, and texturing) as part of course
+            assignments.</li>
+          <li>Added interactive input handling for navigation and parameter tuning during demos.</li>
+        </ul>
 
-      <p><strong>Project Link:</strong> <a href="https://chenhongshan333.github.io/OpenGL-Graphics-Coursework/"
-          target="_blank">OpenGL
-          Coursework</a></p>
-      <p><strong>Duration:</strong> Aug 2025 - Dec 2025</p>
-      <p><strong>Tech Stack:</strong> C++ | OpenGL | GLUT</p>
-    </article>
-
-    <br>
+        <p><strong>Project Link:</strong> <a href="https://chenhongshan333.github.io/OpenGL-Graphics-Coursework/"
+            target="_blank">OpenGL
+            Coursework</a></p>
+        <p><strong>Duration:</strong> Aug 2025 - Dec 2025</p>
+        <p><strong>Tech Stack:</strong> C++ | OpenGL | GLUT</p>
+      </div>
+    </details>
 
     <!-- 9) 3D Modeling and Animation -->
-    <article class="project">
-      <h3>3D Modeling and Animation</h3>
+    <details class="course-group entry">
+      <summary class="course-group__summary">
+        <span class="course-group__name entry__title">3D Modeling and Animation</span>
+      </summary>
+      <div class="entry__body">
 
-      <p><strong>Description:</strong> A collection of coursework demonstrating 3D modeling theory, character animation,
-        and computational geometry through Blender animation and C++/OpenGL mesh processing implementations.</p>
+        <p><strong>Description:</strong> A collection of coursework demonstrating 3D modeling theory, character animation,
+          and computational geometry through Blender animation and C++/OpenGL mesh processing implementations.</p>
 
-      <p><strong>Highlights:</strong></p>
-      <ul>
-        <li>Created a collaborative short animation in Blender featuring custom character modeling, rigging with IK,
-          keyframing with Bezier interpolation, and particle VFX systems.</li>
-        <li>Implemented mesh processing algorithms including triangle mesh data structures (Trist), face/vertex normal
-          computation, smooth shading, and boundary edge detection in C++/OpenGL.</li>
-        <li>Built mesh navigation operations (enext, sym, org, dest, fnext) and component analysis using BFS/DFS for
-          topology computation.</li>
-        <li>Developed OBJ file parser with support for reading/writing Wavefront format, angle statistics computation,
-          and interactive rendering modes (wireframe, flat/smooth shading).</li>
-      </ul>
+        <p><strong>Highlights:</strong></p>
+        <ul>
+          <li>Created a collaborative short animation in Blender featuring custom character modeling, rigging with IK,
+            keyframing with Bezier interpolation, and particle VFX systems.</li>
+          <li>Implemented mesh processing algorithms including triangle mesh data structures (Trist), face/vertex normal
+            computation, smooth shading, and boundary edge detection in C++/OpenGL.</li>
+          <li>Built mesh navigation operations (enext, sym, org, dest, fnext) and component analysis using BFS/DFS for
+            topology computation.</li>
+          <li>Developed OBJ file parser with support for reading/writing Wavefront format, angle statistics computation,
+            and interactive rendering modes (wireframe, flat/smooth shading).</li>
+        </ul>
 
-      <p><strong>Project Link:</strong> <a href="https://github.com/chenhongshan333/3D-Modelling-and-Animation-Coursework"
-          target="_blank">3D Modelling
-          and Animation</a></p>
-      <p><strong>Duration:</strong> Jan 2026 - Apr 2026</p>
-      <p><strong>Tech Stack:</strong> Blender | C++ | OpenGL | GLUT | Cycles Renderer</p>
-    </article>
+        <p><strong>Project Link:</strong> <a href="https://github.com/chenhongshan333/3D-Modelling-and-Animation-Coursework"
+            target="_blank">3D Modelling
+            and Animation</a></p>
+        <p><strong>Duration:</strong> Jan 2026 - Apr 2026</p>
+        <p><strong>Tech Stack:</strong> Blender | C++ | OpenGL | GLUT | Cycles Renderer</p>
+      </div>
+    </details>
 
   </div>
 
