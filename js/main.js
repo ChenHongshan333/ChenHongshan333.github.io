@@ -157,24 +157,99 @@ $(document).ready(function () {
     }
   });
 
-  // Email dropdown click functionality - show for 0.3s then hide
+  // Email dropdown: open on click, stay open while the pointer is on it, and
+  // copy the address to the clipboard when an entry is clicked.
   var emailTimeout;
-  $('.email-trigger').click(function(e) {
+  var $emailMenu = $('.email-dropdown-menu');
+
+  function hideEmailMenu() {
+    $emailMenu.removeClass('show');
+  }
+
+  function scheduleEmailHide(delay) {
+    clearTimeout(emailTimeout);
+    emailTimeout = setTimeout(hideEmailMenu, delay);
+  }
+
+  $('.email-trigger').click(function (e) {
     e.preventDefault();
-    var dropdownMenu = $(this).siblings('.email-dropdown-menu');
-    
-    // Clear any existing timeout
-    if (emailTimeout) {
-      clearTimeout(emailTimeout);
+    e.stopPropagation();
+    $(this).siblings('.email-dropdown-menu').addClass('show');
+    // Auto-close only if the pointer never reaches the menu.
+    scheduleEmailHide(2500);
+  });
+
+  // Keep it open while the pointer is over the dropdown, otherwise a click
+  // target that disappears after a second is impossible to hit.
+  $('.email-dropdown').on('mouseenter', function () {
+    clearTimeout(emailTimeout);
+  }).on('mouseleave', function () {
+    scheduleEmailHide(400);
+  });
+
+  $(document).on('click', function () {
+    hideEmailMenu();
+  });
+
+  // A toast is used rather than in-place text because the dropdown may well
+  // have closed by the time the reader looks for confirmation.
+  var $copyToast;
+
+  function showCopyToast(message, ok) {
+    if (!$copyToast) {
+      $copyToast = $('<div class="copy-toast" role="status" aria-live="polite"></div>')
+        .appendTo('body');
     }
-    
-    // Show the dropdown
-    dropdownMenu.addClass('show');
-    
-    // Hide after 0.3 seconds (300ms)
-    emailTimeout = setTimeout(function() {
-      dropdownMenu.removeClass('show');
-    }, 1000);
+    $copyToast.text(message)
+      .toggleClass('copy-toast--error', !ok)
+      .addClass('show');
+    clearTimeout($copyToast.data('timer'));
+    $copyToast.data('timer', setTimeout(function () {
+      $copyToast.removeClass('show');
+    }, 2000));
+  }
+
+  // Used when the async Clipboard API is unavailable (plain http) or refuses
+  // (permission denied, document not focused).
+  function legacyCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try {
+      ok = document.execCommand('copy');
+    } catch (err) {
+      ok = false;
+    }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text).catch(function () {
+        return legacyCopy(text) ? Promise.resolve() : Promise.reject();
+      });
+    }
+    return legacyCopy(text) ? Promise.resolve() : Promise.reject();
+  }
+
+  // The mailto: href is kept so the link still works without JavaScript and
+  // still offers "copy address" from the context menu.
+  $('.email-copy').click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var address = $(this).data('email');
+    copyText(address).then(function () {
+      showCopyToast('Copied  ' + address, true);
+    }, function () {
+      showCopyToast('Press Ctrl+C to copy: ' + address, false);
+    });
+    scheduleEmailHide(150);
   });
 
   // Resume dropdown click functionality - show for 0.3s then hide

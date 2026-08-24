@@ -79,6 +79,42 @@ pre.highlight code,
   border-radius:100%;
 }
 
+/* Clipboard confirmation toast (email copy) */
+.copy-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 36px;
+  transform: translate(-50%, 12px);
+  z-index: 2000;
+  max-width: calc(100vw - 40px);
+  padding: 11px 20px;
+  border-radius: 24px;
+  background: rgba(20, 20, 20, 0.94);
+  color: #fff;
+  font-size: 0.86em;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.copy-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.copy-toast--error {
+  background: rgba(146, 42, 27, 0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy-toast { transition: opacity 0.2s ease; }
+}
+
 /* About Page Styles */
 .about-content {
   padding: 20px 0;

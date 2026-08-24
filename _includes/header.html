@@ -56,12 +56,14 @@
                 </a>
                 <ul class="email-dropdown-menu">
                   {% if site.author.school_email %}
-                  <li><a href="mailto:{{ site.author.school_email }}" title="School Email">
+                  <li><a href="mailto:{{ site.author.school_email }}" class="email-copy"
+                      data-email="{{ site.author.school_email }}" title="Click to copy school email">
                       <i class="fa-solid fa-graduation-cap"></i>&nbsp;School Email
                     </a></li>
                   {% endif %}
                   {% if site.author.personal_email %}
-                  <li><a href="mailto:{{ site.author.personal_email }}" title="Personal Email">
+                  <li><a href="mailto:{{ site.author.personal_email }}" class="email-copy"
+                      data-email="{{ site.author.personal_email }}" title="Click to copy personal email">
                       <i class="fa-solid fa-house"></i>&nbsp;Personal Email
                     </a></li>
                   {% endif %}
