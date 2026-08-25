@@ -1,0 +1,584 @@
+%-------------------------
+% Resume in Latex -- TikTok Search 2027 Internship
+% Target:
+% LLM/Multimodal AI Engineer Intern (TikTok Search) - 2027 Start
+%
+% v19:  Two edits, both requested.
+%       (a) Focus line REMOVED from the header block. Availability stays and
+%           is now the whole third line, so the "$\;|\;$" separator that used
+%           to join them was removed with it. Knock-on effect worth knowing:
+%           the v17 note "do not keep the Focus phrase if the intent-taxonomy
+%           bullet goes" is now moot, but the reverse dependency is live --
+%           nothing in the header points at that bullet any more, so the
+%           query-intent taxonomy under Trip.com is the sole carrier of the
+%           query-understanding signal. It is doing more work than before.
+%           This also frees ~1 line of vertical space at the top of the page;
+%           because \raggedbottom top-aligns, that space lands at the BOTTOM,
+%           under Leadership. Nothing reflows.
+%       (b) Footer added: "Last updated: Aug 2026", bottom-right, \scriptsize
+%           italic. Requires a \footskip, since the page had no footer before
+%           and \textheight is extended -- see the note at the fancyhdr block.
+%           Not compiled/measured. VERIFY once by eye that the footer sits on
+%           the paper and does not touch the last Leadership line.
+%
+% v18:  CONTENT PASS, no spacing changes. Four edits.
+%       (a) RETRACTION of v17(c). "(offered)" -> "(reserve tutor)".
+%           The CS2103/T email states the opposite of an offer: ~90% of
+%           positions went to higher-ranked applicants, the chance of an
+%           offer this semester is "rather low", and the coordinator
+%           explicitly authorised one phrase and one phrase only --
+%           "you are allowed to state on your resume that you were a
+%           'reserve tutor'". v17's framing was not optimistic wording,
+%           it was contrary to fact, and the accompanying "declined for a
+%           scheduling clash" note was a rehearsed line for a question
+%           that has a true answer. Both are removed. Do not reinstate.
+%           "reserve tutor" is a ROLE, not a status flag -- which is why
+%           it reads better than a bare "(reserve)" while staying exact.
+%       (b) Availability: "(9 months)" -> "Full-time". The month count is
+%           derivable from the dates already on the line; full-time vs.
+%           part-time is not, and the JD asks for availability by name.
+%           Net -1 char, so the line does not reflow.
+%       (c) Trip.com bullet 3: "1,950 evaluations across 5 models" ->
+%           the full experiment matrix (questions x models x runs). The
+%           lost signal in v17 was "3 runs per model-question pair", i.e.
+%           that LLM grading has variance and was measured, not assumed.
+%           Written as a product so the reader sees a designed matrix
+%           rather than one large number. Costs ~30 chars.
+%           >>> VERIFY: 130 is BACK-DERIVED from 1950/5/3. If the real
+%           >>> item count differs, fix the first factor. <<<
+%       (d) Trip.com bullet 1: "travel agent evaluation system" ->
+%           "LLM travel-agent evaluation system". v17 dropped "LLM",
+%           which is the JD's own noun ("evaluation modules" for an AI
+%           Search Agent); bare "travel agent" can be misread as the
+%           human occupation. The hyphen does the disambiguating work.
+%       IF THE PAGE OVERFLOWS: (c) and (d) are the additions. Take the
+%       space back from Trip.com bullet 1, whose "built to produce
+%       rankings that survive re-runs" and "addressing the
+%       non-reproducibility of LLM-as-judge grading" say the same thing
+%       twice. Do NOT cut the piano/climbing line to pay for this.
+%
+% v17:  CONTENT PASS, no spacing changes. Four edits, all JD-driven:
+%       (a) Trip.com bullet 2: "taxonomy of user information needs" ->
+%           "query intent taxonomy". Same claim, the JD's vocabulary
+%           ("intent analysis", "query understanding"). Net -2 chars, no
+%           reflow. This is the page's only query-understanding evidence.
+%       (b) Harmonia bullet 1: named the task (four-way review quality
+%           classification on Google location reviews). The pipeline was
+%           described but never said what it classified, which left the
+%           ~92% in bullet 2 unanchored. Costs ~half a line -- the only
+%           edit here with a page-fit risk.
+%       (c) Education: "(reserve)" -> "(offered)". "reserve" reads as
+%           "not selected"; two TA offers in year 2 is the actual signal.
+%       (d) Focus line: added "query understanding", which (a) now
+%           supports. Dropped nothing -- "retrieval quality" stays.
+%       REMOVED: the commented-out Hybrid Retrieval / reranking slot.
+%       Decision taken to NOT ship a ranking experiment: IR/ranking sits
+%       in the JD's Preferred list, not Minimum, and a weekend benchmark
+%       with untuned baselines interviews worse than an honest gap.
+%       If that changes, the block is in v16 of this file.
+%
+% v3.1: spacing pass (margins, section formatting, macro spacing)
+% v4:   content pass -- Education condensed to 2 items ("Awards" label),
+%       Trip.com 6 bullets -> 4, bold density cut to one span per bullet.
+% v5:   FIX -- \resumeItem now uses %-continuations so a bullet whose last
+%       line reaches the right margin no longer emits a phantom blank line.
+%       Section lead-in tightened 6pt -> 3pt.
+% v6:   Added \titlespacing for \section -- the actual control for the gap
+%       between sections. Header block pulled up (-2pt -> -6pt).
+% v7:   UNIFORM SECTION GAPS. All lists now have topsep/partopsep pinned to 0,
+%       so \titlespacing is the single source of truth for the gap. The Skills
+%       block additionally gets \vspace{6pt} because -- unlike every other
+%       section -- it does not end with \resumeItemListEnd and so was not
+%       receiving that macro's trailing space. Measured gap above each of the
+%       five section titles is now equal.
+%       TO LOOSEN/TIGHTEN EVERYTHING: change the middle number in \titlespacing.
+%       If you do, change the Skills \vspace by the same amount to stay uniform.
+% v8:   Body block raised. Space was taken from INSIDE the header block
+%       (name \Huge -> \LARGE, the two \vspace{3pt} -> 2pt) rather than from
+%       the header->EDUCATION gap, so all five section gaps stay equal.
+%       topmargin -0.74in -> -0.79in shifts everything up; the freed space
+%       lands under Leadership because \raggedbottom top-aligns the page.
+%       Result: top margin 0.21in, bottom margin 0.31in.
+% v9:   Name restored to \Huge. The header->EDUCATION gap is now DELIBERATELY
+%       smaller than the section-to-section gap (\vspace{-14pt} after the
+%       header block). This is not an inconsistency: the header is a light
+%       block, the body is dense, and a light/heavy boundary wants less air
+%       than a heavy/heavy one. The five SECTION-to-SECTION gaps remain equal
+%       -- that is the constraint that actually matters.
+%       Knob: the \vspace after \end{center}. -10pt loose, -14pt current,
+%       -18pt tight. Every 4pt moved here lands under Leadership.
+% v10:  JD keyword pass. (a) "automated scoring" -> "automated answer-quality
+%       scoring", matching the JD's "answer quality evaluation" verbatim.
+%       (b) Bold moved from engagement-weighted sampling onto the taxonomy
+%       phrase -- the taxonomy is the only query-understanding evidence on the
+%       page and should be what the eye lands on; count restored to 14.
+%       (c) NAACL split out of bullet 1 (which carried four ideas over five
+%       lines) into its own bullet, so the first-author signal has a landing
+%       spot. Costs one line.
+%       (d) Skills: "RAG & vector retrieval" -> "information retrieval (...)",
+%       covering the JD's IR/ranking vocabulary without overclaiming.
+%       If the page overflows, cut the piano/climbing line in Leadership.
+% v12:  (a) Awards + GPA merged onto one line, GPA in the tail position --
+%       reclaims the line that pushed the page over, and puts the eye on the
+%       scholarship rather than on a mid-range number.
+%       (b) SECTION GAP consolidated. It was being fed by three sources at
+%       once (resumeItemListEnd's \vspace, the Skills block's \vspace, and
+%       titlespacing's "before"), which is why lowering only the last one
+%       barely moved it. The first two are now 0 and "before" is 0 as well.
+%       ONE KNOB: \titlespacing's middle arg. 0pt = current (tight),
+%       4pt = moderate. Do not reintroduce trailing \vspace anywhere.
+%       Note the deliberate asymmetry: title->content is 6pt (titlespacing
+%       "after" 4pt + \resumeSubheading's 2pt) while content->next-title is
+%       ~0pt. A title should bind downward to the block it labels.
+% v13:  Title->content gap equalised. Skills and Leadership are bare itemize
+%       blocks with no \resumeSubheading, so they were missing that macro's
+%       leading \vspace{2pt} and sat 2pt tighter under their titles than
+%       Education/Experience/Projects did. Their topsep is now 2pt.
+%       If \resumeSubheading's leading \vspace ever changes, change these two
+%       topsep values to match, or the asymmetry comes back.
+% v16:  MEASURED FROM PDF COORDINATES, not from rasterised pixels.
+%       v14/v15 were tuned against pixel ink-gaps, which are corrupted by
+%       descenders and antialiasing -- they reported 7.68/9.84/7.44/7.20 for
+%       four boundaries that pdftotext -bbox shows are ALL EXACTLY 10.05pt.
+%       Two rounds of "fixes" were chasing that noise. The four body sections
+%       never needed touching.
+%       The one real outlier was Education at 2.08pt, caused by the header
+%       pull-up. \vspace{-14pt} -> \vspace{-6pt}. All five now read 10.05pt.
+%       The v9 rationale for a deliberately tighter header boundary is hereby
+%       withdrawn: uniform reads better here.
+%       HOW TO VERIFY (do not trust your eye or a screenshot at 2pt scale):
+%         pdflatex resume.tex && python3 bb.py resume.pdf
+%       bb.py groups `pdftotext -bbox` words into lines and prints the gap
+%       above each section title. Anything within 0.1pt is exact.
+%
+% v15:  The OTHER half of the boundary. v14 equalised title->content but left
+%       content->title alone, which measured:
+%         Edu 4.08 | Exp 7.68 | Proj 9.84 | Skills 7.44 | Leadership 3.12
+%       Leadership was half of everything else for the same structural reason
+%       as v14: every other section ends via \resumeItemListEnd, whose list has
+%       topsep=4pt and re-emits it at \endlist. The Skills block is a bare
+%       itemize with topsep=0, so it emitted nothing. These two contributions
+%       SUM (they are not \addvspace max), hence the exact 4pt shortfall.
+%       Fixed with \vspace*{4pt} after the Skills \end{itemize}.
+%       Now: Exp 7.68 | Skills 7.44 | Leadership 7.20 -- 0.48pt spread.
+%       TWO REMAINING NON-UNIFORMITIES, BOTH INTENTIONAL:
+%       - Projects reads 9.84. The line above it ("across revisits.") has no
+%         descender; the others end in g/y/p. That 2.40pt IS the descender
+%         depth. Baselines are uniform. Do not "fix" this -- padding it would
+%         make the baseline grid wrong to correct an artifact of one glyph.
+%       - Education reads 4.08 by design: the header is a light block and a
+%         light/heavy boundary wants less air (see v9).
+%
+% v14:  MEASURED, not guessed. Rasterised the PDF at 300dpi and measured the
+%       rule-to-first-ink gap under each of the five section titles. v13 read:
+%         Education 5.04pt | Experience 4.80 | Projects 3.12 | Skills 1.92 |
+%         Leadership 1.92
+%       Two separate faults, not one:
+%       (1) \resumeProjectHeading lacked the \vspace{2pt} that
+%           \resumeSubheading has, so Projects sat 2pt tight. Added it, and
+%           took the same 2pt back out of \projGap (6pt -> 4pt) so the gap
+%           BETWEEN projects is unchanged.
+%       (2) topsep is INERT in the Skills/Leadership blocks -- verified by
+%           sweeping it 0pt -> 20pt with no movement at all. Those blocks are
+%           written \small{\item{...}}, which wraps \item inside a group and
+%           swallows the list's opening skip. Fixed with a rigid \vspace*{3pt}
+%           after the section title, which does not depend on list mechanics.
+%       Now measures 5.04 / 4.80 / 5.04 / 4.80 / 4.80 -- 0.24pt spread.
+%       IF YOU EDIT: topsep will not help in those two blocks. Change the
+%       \vspace*{3pt} instead.
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% [v19] FOOTER. One line of small text, bottom-right. Deliberately \scriptsize
+% + \itshape so it reads as metadata and not as resume content.
+% NOTE: \textheight is extended by 1.62in below, so the text block already
+% runs close to the bottom edge. \footskip is the ONLY thing keeping the
+% footer on the paper -- it is the distance from the bottom of the text block
+% down to the footer baseline. Measured bottom margin is ~0.31in (~22pt), so
+% 13pt leaves ~9pt of paper under the footer. Do not raise it much past 16pt
+% without re-measuring, and if you ever increase \textheight, decrease this.
+% TO EDIT THE DATE: change the string below, nothing else.
+\fancyfoot[R]{\scriptsize\itshape Last updated: Aug 2026}
+\setlength{\footskip}{13pt}
+
+%----------MARGINS----------
+\addtolength{\oddsidemargin}{-0.45in}
+\addtolength{\evensidemargin}{-0.45in}
+\addtolength{\textwidth}{0.8in}
+\addtolength{\topmargin}{-0.66in}
+\addtolength{\textheight}{1.1in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% [v19] fancyhdr 在 \pagestyle{fancy} 执行时就把 \textwidth 拷进 \headwidth，
+% 而那句在上面 MARGINS 之前，所以页脚宽度停在 fullpage 的原始值、比正文窄 0.8in。
+% 必须在 textwidth 改完之后重新同步一次。
+\setlength{\headwidth}{\textwidth}
+
+%----------SECTION FORMATTING----------
+\titleformat{\section}{
+  \scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+% [v12] SECTION GAP -- SINGLE CONTROL POINT.
+% The gap above a section title was never just this number: it was
+%   \resumeItemListEnd's trailing \vspace  +  titlespacing's "before"
+%   +  itemize's own trailing skip  (partly offset by the -2pt after the rule).
+% Those trailing \vspace values are now 0 (see \resumeItemListEnd and the
+% Skills block), so the "before" arg below is the ONLY knob. Raise it to
+% loosen, lower it to tighten. Args: {indent}{before}{after}.
+\titlespacing*{\section}{0pt}{4pt}{4pt}
+
+\pdfgentounicode=1
+
+%----------CUSTOM COMMANDS----------
+\newcommand{\resumeItem}[1]{%
+  \item\small{{#1}}%
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small #1 & #2 \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0.15in, label={}, topsep=0pt, partopsep=0pt,
+                  parsep=0pt, itemsep=0pt]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}
+}
+
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=0pt, topsep=4pt, partopsep=0pt]
+}
+
+% [v12] Trailing \vspace zeroed. This fires after the LAST bullet of every
+% section too, where it was silently padding the section gap. Section
+% separation is now owned solely by \titlespacing.
+\newcommand{\resumeItemListEnd}{
+  \end{itemize}
+}
+
+% [v11] Gaps BETWEEN entries inside a section. Placed by hand between entries
+% (never before the first one, never after the last), so section boundaries
+% stay tight while entries breathe. Experience entries are longer and denser,
+% so they get more air than Projects.
+\newcommand{\entryGap}{\vspace{6pt}}
+\newcommand{\projGap}{\vspace{3pt}}
+
+%-------------------------------------------
+%%%%%% RESUME STARTS HERE %%%%%%%%%%%%%%%%%%
+%-------------------------------------------
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Hongshan Chen} \\ \vspace{2pt}
+    \small
+    (+65) 9195 4027 $|$
+    \href{mailto:e1471281@u.nus.edu}{\underline{e1471281@u.nus.edu}} $|$
+    \href{https://github.com/ChenHongshan333}{\underline{GitHub}} $|$
+    \href{https://www.linkedin.com/in/hongshan-chen-606928366/}{\underline{LinkedIn}} $|$
+    \href{https://chenhongshan333.github.io/}{\underline{Portfolio}}
+    \\ \vspace{2pt}
+    \small
+    % [v19] Focus line removed by request. The separator "$\;|\;$" went with
+    % it -- Availability now stands alone on this line and must NOT carry a
+    % leading bar. If Focus is ever reinstated, restore the separator too.
+    % [v18] "(9 months)" dropped: derivable from the dates. "Full-time" is
+    % not derivable, and the JD asks for availability explicitly.
+    \textbf{Availability:} Full-time, May 2027 -- Jan 2028
+\end{center}
+
+\vspace{-12pt}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {National University of Singapore}{Aug 2024 -- Jul 2028}
+    {Bachelor of Computing in Computer Science, minoring in Interactive Media}{Singapore}
+
+    \resumeItemListStart
+
+      % [v12] Awards + GPA on one line, GPA in the tail position: the
+      % scholarship is the stronger signal and should own the eye's landing
+      % point. Merging also reclaims the line that pushed the page over.
+
+      
+      \resumeItem{
+        \textbf{Awards:} NUS Science and Technology Undergraduate Scholarship
+      }%
+
+       
+      \resumeItem{
+        \textbf{GPA:} 4.30/5.00
+      }%
+      
+
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+
+\resumeSubHeadingListStart
+
+  %----- TRIP.COM -----
+  \resumeSubheading
+    {Algorithm Intern $|$ LLM Agent Evaluation, Hotel R\&D}
+    {Jun 2026 -- Aug 2026}
+    {Trip.com Group (Ctrip)}
+    {Shanghai, China}
+
+    \resumeItemListStart
+
+      % [v4] old bullets 1 + 2 + 6 merged. The answer-key design is now a
+      % clause inside the system description; the NAACL target is a tail phrase.
+      % [v18] "LLM" restored and "travel-agent" hyphenated. The JD's noun for
+      % this is an agent evaluation module; bare "travel agent" reads as the
+      % human occupation. FIRST PLACE TO CUT if the page overflows -- the
+      % "survive re-runs" clause and the "non-reproducibility" clause are the
+      % same claim stated twice.
+      \resumeItem{
+        Independently owned an \textbf{end-to-end LLM travel-agent evaluation system} --- corpus
+        construction, question generation, answer keys grounded in mechanically decidable
+        attributes, automated answer-quality scoring, and leaderboards --- built to produce
+        rankings that survive re-runs, addressing the non-reproducibility of LLM-as-judge
+        grading.
+      }%
+
+      % [v17] "taxonomy of user information needs" -> "query intent taxonomy".
+      % Identical claim (information need == intent in the IR literature), but
+      % in the JD's own vocabulary: "intent analysis", "query understanding".
+      % This is the page's ONLY query-understanding evidence -- it carries the
+      % bold, and it is what the Focus line points at.
+      \resumeItem{
+        Derived a \textbf{query intent taxonomy} (room type,
+        restaurants, cancellation policy, \dots) from real user discussions via open coding
+        with entropy-based saturation analysis, then applied engagement-weighted sampling to
+        align benchmark coverage with the observed query distribution.
+      }%
+
+      % [v18] Matrix written out as a product. The point is not the size of
+      % 1,950 -- it is the "x 3 runs", which says the variance of LLM grading
+      % was measured rather than assumed. A bare total hides that factor.
+      % >>> 130 IS BACK-DERIVED (1950 / 5 / 3). Replace with the true item
+      % >>> count before sending. A smaller number is fine, arguably better:
+      % >>> the tail of this bullet is what justifies it. <<<
+      \resumeItem{
+        Validated reliability through \textbf{sample-size and ranking-stability analysis}
+        (130 questions $\times$ 5 models $\times$ 3 runs = 1,950 evaluations), establishing
+        how many items are needed before the leaderboard ordering stops moving.
+      }%
+
+      \resumeItem{
+        Engineered a \textbf{concurrent Python pipeline} (async workers, Playwright, cascaded
+        LLM filtering) that crawls, deduplicates, and validates real user discussions into a
+        structured retrieval corpus.
+      }%
+
+      \resumeItem{
+        Preparing a \textbf{first-author manuscript}, with submission planned for late 2026.
+      }
+
+    \resumeItemListEnd
+
+  \entryGap
+
+  %----- NUS RESEARCH -----
+  \resumeSubheading
+    {Undergraduate Researcher $|$ NUS Odyssey Research Programme
+    }
+    {May 2026 -- Present}
+    {National University of Singapore}
+    {Singapore}
+
+    \resumeItemListStart
+
+        \resumeItem{
+            Co-designed a \textbf{long-horizon evaluation benchmark for video world models},
+            testing whether generated videos preserve evidence and maintain a consistent 3D world across camera departure, occlusion, viewpoint changes, and revisits; manuscript in preparation for submission.
+        }%
+
+      \resumeItem{
+        Generated controlled synthetic data in \textbf{Unreal Engine 5} (scripted camera
+        trajectories, revisit paths, per-object segmentation) --- chosen over in-the-wild video so
+        that failures are attributable to the model rather than to uncontrolled scene variation.
+      }%
+
+      \resumeItem{
+        Contributed to designing \textbf{quantitative metrics and evaluation protocols}
+        for reproducibly measuring these failure modes across models.
+      }%
+
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+  %----- TIKTOK TECHJAM -----
+  \resumeProjectHeading
+    {
+      \textbf{Harmonia} $|$ \textbf{TikTok TechJam 2025}
+      $|$
+      \emph{FAISS, RAG, CLIP, vLLM}
+      \href{https://devpost.com/software/harmonia-fnxts1}
+      {\underline{[Project Link]}}
+    }
+    {Aug 2025 -- Sep 2025}
+
+    \resumeItemListStart
+
+      % [v17] Task named. The pipeline was fully described but never said what
+      % it classified, which left bullet 2's ~92% with nothing to attach to.
+      % UGC quality classification is also the closest thing on this page to
+      % what the target team actually works on -- worth the half line.
+      \resumeItem{
+        Led architecture of a \textbf{4-stage cascaded multimodal pipeline} for four-way
+        review-quality classification (valid vs.\ three violation types) on Google location
+        reviews: rule-based filtering $\rightarrow$ FastBERT with entropy-based confidence
+        routing $\rightarrow$ Qwen3-8B + CLIP text--image alignment $\rightarrow$ RAG
+        verification over a FAISS index, served via vLLM --- routing cheap traffic to cheap
+        models and escalating only on low-confidence samples.
+      }%
+
+      \resumeItem{
+        Profiled the \textbf{accuracy--latency frontier}: $\sim$92\% accuracy at
+        $\sim$150ms/sample, roughly 5 points above the latency-matched blend of the two
+        endpoint models --- evidence that confidence routing beats naive mixing.
+      }
+
+    \resumeItemListEnd
+
+  \projGap
+
+  %----- NETEASE -----
+  \resumeProjectHeading
+    {
+      \textbf{NetEase Cloud Music Support Agent}
+      $|$
+      \emph{Spring Boot, RAG, Redis}
+      \href{https://chenhongshan333.github.io/NetEase-music-agent-backend-demo/}
+      {\underline{[Project Link]}}
+    }
+    {Dec 2025 -- Jan 2026}
+
+    \resumeItemListStart
+
+      \resumeItem{
+        Built a \textbf{RAG support-agent backend} in Spring Boot with top-K retrieval and query
+        normalisation; added a no-evidence refusal gate that short-circuits generation when
+        retrieval returns zero hits, trading answer coverage for groundedness so the agent
+        declines rather than fabricates.
+      }%
+
+      \resumeItem{
+        Wrote a load-testing harness (500 requests @ concurrency 20) that \textbf{diagnosed a JDBC
+        connection-pool ceiling}, raising throughput 3.5 $\rightarrow$ 8.3 req/s; added
+        retry/circuit-breaker, idempotent writes, and Prometheus metrics.
+      }
+
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+
+\vspace*{3pt}
+
+% [v14] The \vspace*{3pt} above -- NOT topsep -- is what sets this block's
+% gap under the title. topsep does nothing here (see header note).
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt,
+                topsep=0pt, partopsep=0pt, parsep=0pt]
+  \small{\item{
+    \textbf{AI \& ML}{: offline evaluation \& metric design, statistical experiment design,
+    information retrieval (vector search, RAG, retrieval corpus construction),
+    LLM agents (planning, tool use), multimodal learning (CLIP), video understanding,
+    prompt engineering} \\[2pt]
+    \textbf{Programming}{: Python, C++, Java, C, SQL, JavaScript} \\[2pt]
+    \textbf{Tools}{: PyTorch, FAISS, vLLM, NumPy, Spring Boot, Redis, MySQL, Docker,
+    Playwright, async Python, Git/GitHub Actions, Linux/CLI, Unreal Engine 5}
+  }}
+\end{itemize}
+
+\vspace*{4pt}
+
+
+%-----------LEADERSHIP & ACTIVITIES-----------
+\section{Leadership \& Activities}
+
+\vspace*{3pt}
+
+% [v4] kept, but compressed to two lines. If the page overflows, the second
+% line (piano / climbing) is the first thing to cut -- the FFC line stays.
+% [v14] Gap under the title comes from the \vspace*{3pt} above, not topsep.
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt,
+                topsep=0pt, partopsep=0pt, parsep=0pt]
+
+  \small{\item{
+    \textbf{Logistics Head, SoC Freshmen Finale Camp 2026} ---
+    led logistics planning, vendor coordination, and budget tracking.
+  }}
+
+  \small{\item{
+    \textbf{NUS Piano Ensemble} --- annual ensemble concerts.
+    $|$
+    \textbf{NUS Climbing Club} --- SNCS Level 2 Sport Climbing certification.
+  }}
+
+  
+
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
