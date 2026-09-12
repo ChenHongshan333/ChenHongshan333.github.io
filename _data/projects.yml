@@ -13,6 +13,14 @@
   img: /images/worldmodel.svg
   tags: [AI/ML, Computer Graphics]
 
+- name: "Seekly: Intent-Aware Conversational Product Search"
+  meta: TechJam 2026 Conversational E-Commerce Search Challenge | Aug 2026 - Sep 2026
+  no_gh: true
+  url: https://devpost.com/software/npc-union-conversational-search
+  desc: "A stateful shopping agent for multi-turn search over a frozen 50,000-product Amazon catalog. Seekly combines reversible constraint memory, intent-aware clarification, exact and fielded BM25 retrieval, weighted reciprocal-rank fusion, and progressive exposure. Its deterministic, fully offline configuration found all 200 public targets, placing 190 at rank 1 (Hit Rate@10 1.000, MRR 0.965853, MTTC 2.305) with zero token cost. [Explore the live demo](https://techjam-conversational-search.vercel.app/) or [view the source on GitHub](https://github.com/ChenHongshan333/techjam-conversational-search)."
+  img: /images/seekly-logo.png
+  tags: [AI/ML, Software Engineering]
+
 - name: NetEase Cloud Music Intelligent Customer Support Agent (Minimal RAG)
   gh_user: ChenHongshan333
   repo: NetEase-music-agent-backend-demo

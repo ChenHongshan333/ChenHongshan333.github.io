@@ -39,6 +39,7 @@ reachable by link but is not indexed by search engines.
 | --- | --- | --- |
 | LLM Travel-Agent Evaluation System *(Trip.com internship)* | AI/ML | Python, async pipelines, Playwright, LLM APIs |
 | Long-Horizon Benchmark for Video World Models *(NUS Odyssey)* | AI/ML, Computer Graphics | Unreal Engine 5, Python |
+| Seekly — Intent-Aware Conversational Product Search | AI/ML, Software Engineering | Python, BM25, RRF, SQLite, Vercel |
 | NetEase Cloud Music Support Agent | AI/ML, Software Engineering | Java, Spring Boot, RAG, Redis, Docker |
 | Harmonia — Multimodal Hybrid Review Validation | AI/ML | Python, FastBERT, CLIP, FAISS, Qwen, vLLM |
 | Grid Adventure Agent | AI/ML | Python, PyTorch, A\* search |
